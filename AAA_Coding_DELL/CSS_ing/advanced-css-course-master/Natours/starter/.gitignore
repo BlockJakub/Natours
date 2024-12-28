@@ -1,4 +1,7 @@
+# Node.js dependencies
 node_modules/
+
+# Build directories
 dist/
 build/
 
@@ -29,25 +32,26 @@ ntuser.ini
 *.tmp
 *.bak
 *~
-.vscode/
+
+# IDE-specific files
 *.suo
 *.user
 *.sln
 *.csproj
 *.vcxproj
 *.xcodeproj
+
+# Test coverage and test files
 coverage/
 test/
 *.spec.js
 *.test.js
-*.log
-*.tmp
-*.pid
-*.lock
-*.swp
-*.bak
-*~
+
+# Environment files
 .env
 .env.*
+.node
+
+# macOS and Windows system files
 .DS_Store
 Thumbs.db
