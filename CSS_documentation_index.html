@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__logo-box">
+            <img src="img/logo-white.png" alt="logo" class="header__logo" />
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">CSS and SCSS Documentation</span>
+                <span class="heading-primary--sub">is where coding happens with Udemy course CSS and SCSS</span>
+            </h1>
+
+            <a href="#" class="btn btn--white btn--animatd">Discover our codes</a>
+        </div>
+    </hader>
+    <!-- END OF HEADER -->
+
+
+    <!-- Descriprtion of MAIN 
+    it is cutted in BEM(Block, Element, Modifier). .main, 
+    .main__learning, .main__learning-item, .main__learning--subject -->
+    <main class="main">
+        <div class="grid-test">
+            <div class="col-1-of-3">
+                <h1>SASS - SCSS</h1>
+                <p>SASS is a preprocessor, an extension of CSS that adds power and elgance to the basic
+                    language.</p>
+                <p>SASS SOURCE CODE ====> Sass compiler ====> COMPILED CSS CODE</p>
+                <div class="grid-test">
+                    <h3> MAIN SASS FEATURES</h3>
+                    <ul>
+                        <li><b>Variables:</b> for reusable values such as colors, font-sizes, spacing, etc;</li>
+                        <li><b>Nesting:</b> to nest selectors inside of one another, allowing us to write less
+                            code;</li>
+                        <li><b>Operators:</b> for mathematical operations right inside of CSS</li>
+                        <li><b>Partials and imports:</b> to write CSS in different files and importing them all
+                            into one single file;</li>
+                        <li><b>Mixins:</b> to write reusable pieces of CSS code</li>
+                        <li><b>Functions:</b> similar to mixins, with the difference that they produce a value
+                            that can be used;</li>
+                        <li><b>Extends:</b> to make different slectors inherit declarations that are common to
+                            all of them;</li>
+                        <li><b>Control directives:</b> for writing complex code using conditionals and loops(not
+                            covered in this course)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-test">
+                <img src="#" width="268" height="256" />
+                <h1> -- RENDERING BY BROWSER THE CONTENT ON SCREEN -- </h1>
+                <dl>
+                    <dt>Definition</dt>
+                    <dd>Algorithm that calculates boxes and determines the layout of theses boxes, for each element in
+                        the render tree, in order to determine the final layout of the page.</dd>
+                </dl>
+                <ul>
+                    <li><b>Dimensions of boxes:</b>the box model;</li>
+                    <li><b>Box type:</b>inline, block and inline-block;</li>
+                    <li><b>Positioning scheme:</b>floats and positioning;</li>
+                    <li><b>Stacking contents;</b></li>
+                    <li>Other elements in the render tree;</li>
+                </ul>
+            </div>
+            <!-- BOX MODEL 1., 2., 3. -->
+            <div class="grid-test__row d-flex">
+                <div>
+                    <div class="main__learning-item">
+                        <h1>== 1. THE BOX MODEL WITH BOX-SIZING: BORDER-BOX</h1>
+                        <div class="main__learning--subject">
+                            <ul>
+                                <li><b>Content:</b>text, images, etc;</li>
+                                <li><b>Padding:</b>transparent area around the content, inside of the box;</li>
+                                <li><b>Border:</b>goes around the padding and the content;</li>
+                                <li><b>Margin:</b>space between boxes;</li>
+                                <li><b>Dill area:</b>area that gets filled with background color or background image;
+                                </li>
+                            </ul>
+                            <p>Calculating total width. Total width = right border + right padding + specified width +
+                                left
+                                paddding + left border</p>
+                            <br />
+                            <p>therefore better use <code>box-sizing:border box;</code> Total widht = specified width.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="main__learning--subject">
+                        <h1>== 2. Box Types: INLINE, BLOCK-LEVEL and INLINE-BLOCK</h1>
+
+                        <div class="main__learning--subject">
+                            <h1>BLOCK-LEVEL boxes</h1>
+                            <code>
+                        <pre>
+                        display: block;
+                        display: flex;
+                        display: list-item;
+                        display: table;
+                        </pre>
+                    </code>
+                            <ul>
+                                <li>Elements formatted visualy as blocks</li>
+                                <li>Takes, occupies 100% of parent's width space</li>
+                                <li>Vertically one after another</li>
+
+                            </ul>
+                        </div>
+                        <div class="main__learning--subject">
+                            <h1>INLINE-BLOCK boxes</h1>
+                            <code><pre>display: inline-block;
+                    </pre></code>
+                            <ul>
+                                <li>A mix of block and inline</li>
+                                <li>Occupies onlly content's space</li>
+                                <li>No line breaks</li>
+                            </ul>
+                        </div>
+                        <div class="main__learning--subject">
+                            <h1>INLINE boxes</h1>
+                            <code><pre>display: inline;
+                    </pre></code>
+                            <ul>
+                                <li>Content is distributed in lines</li>
+                                <li>Occupies onlly content's space</li>
+                                <li>No line breaks</li>
+                                <li>No heights and widths</li>
+                                <li>Paddings and margins only horizontal(left and right)</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main__learning-item">
+                        <div class="subject">
+                            <h1>== 3. POSITIONING SCHEMES: NORMAL FLOW, ABSOLUTE POSITIONNING AND FLOATS</h1>
+                        </div>
+                        <div class="subject">
+                            <h3>NORMAL FLOW</h3>
+                            <code>
+                        <pre>Deafault
+                        position: relative;
+                        </pre>
+                    </code>
+                            <ul>
+                                <li>Default positioning scheme;</li>
+                                <li><b>NOT</b> floated;</li>
+                                <li><b>NOT</b> absolutely positioned;</li>
+                                <li>Elements laid out according to their source order.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="subject">
+                            <h3>FLOATS</h3>
+                            <code>
+                        <pre>
+                        float: left;
+                        float: right;
+                        </pre>
+                    </code>
+                            <ul>
+                                <li><b>Element is removed from the normal flow;</b>></li>
+                                <li>Text and inline elements will wrap around the floated element;</li>
+                                <li>The container will not adjust its height to the element.</li>
+
+                            </ul>
+                        </div>
+                        <div class="subject">
+                            <h3>ABSOLUTE POSITIONING</h3>
+                            <code>
+                        <pre>
+                        position: absolute;
+                        position: fixed;
+                        </pre>
+                    </code>
+                            <ul>
+                                <li><b>Element is removed from the normal flow;</b>></li>
+                                <li>No impact on surrounding content or elements;</li>
+                                <li>We use top, bottom, left, and right to offset the element from its relatively
+                                    positioned container.</li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="learning-item">
+                        <div class="subject">
+                            <h1>STACKING CONTEXTS</h1>
+                            <code>
+                        <pre>
+                        z-index: 3;
+                        position:relative;
+
+                        z-index: 2;
+                        position: absolute;
+
+                        z-index: 1;
+                        position: relative;
+                        </pre>
+                    </code>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="learning-item">
+                    <div class="subject">
+                        <h1>Maintainable and scalable code</h1>
+                        <h1>THE THINK - BUILD ARCHITECT MINDSET</h1>
+                        <ul>
+                            <li>CLean</li>
+                            <li>Modular</li>
+                            <li>Reusable</li>
+                            <li>Ready for growth</li>
+                        </ul>
+                    </div>
+                    <div class="learning-item">
+                        <h3>THINK</h3>
+                        <p><b>Think</b> about the layout of your webpage or web app before writing code</p>
+                        <div class="subject-content">
+                            <h3>COMPONENT - DRIVEN DESIGN</h3>
+                            <p><b>Components</b> are the building blocks that we use to construct the interfaces.
+                                Interface is collection of the components.</p>
+                            <ul>
+                                <li><b>Modular building blocks</b> that make up interfaces;</li>
+                                <li>Held together by the <b>layout</b> of the page;</li>
+                                <li><b>Re-usable</b> accross a project and between different projects;</li>
+                                <li><b>Independent</b> allowing us to use them anywhere on the page.</li>
+                            </ul>
+                            <p>The smallest units on a page are atoms what are organisms = components</p>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <h3>BUILD</h3>
+                        <p><b>Build</b> your layout in HTML and CSS with a consistent structure for naming classes.</p>
+                        <code>
+                    <pre>
+                    .block {}
+                    .block__element {}
+                    .block__element--modifier {}
+                    </pre>
+                </code>
+
+                        <div class="learning-item">
+                            <h3>BEM</h3>
+                            <p><b>BEM</b> stands for Block Element Modifier</p>
+                            <ul>
+                                <li><b>B</b>lock <b>E</b>lement <b>M</b>odifier</li>
+                                <li><b>BLOCK:</b> standalone component that is meaningful on its own</li>
+                                <li><b>ELEMENT:</b> part of a block that has no standalone meaning.</li>
+                                <li><b>MODIFIER:</b> a different version of a block or an element</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <h1>ARCHITECTING WITH FILES AND FOLDERS</h1>
+                        <h3>ARCHITECT</h3>
+                        <p>Create a logical <b>architecture</b> for your CSS with files and folders.</p>
+                        <div class="subject-content">
+                            <h3>THE 7 - 1 PATTERN</h3>
+                            <dl>
+                                <dt>THE 7 - 1 PATTERN</dt>
+                                <dd>7 different folders for partial Sass files, and 1 main Sass file to import all other
+                                    files into a compiled CSS stylesheets.</dd>
+                            </dl>
+                            <h3>THE 7 FOLDERS</h3>
+                            <ul>
+                                <li>base/ (basic project definitions) </li>
+                                <li>components/ (where we have one file for each component)</li>
+                                <li>layout/ (where we define the layout of the project)</li>
+                                <li>pages/ (Where we have specific styles for the project)</li>
+                                <li>themes/ (to implement different visual themes)</li>
+                                <li>abstracts/ (where we put code what doedn't output any CSS such as variables, mixins)
+                                </li>
+                                <li>vendors/ (where all third party goes)</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
