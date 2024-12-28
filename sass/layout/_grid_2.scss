@@ -1,0 +1,45 @@
+.grid-test {
+    display: grid;
+    margin-top: 120px;
+    padding-top: $gutter-vertical;
+    grid-gap: $gutter-vertical $gutter-horizontal;
+}
+
+.row {
+    display: grid;
+    max-width: $grid-width;
+    margin: 0 auto;
+    grid-gap: $gutter-vertical $gutter-horizontal;
+
+    // For a 12-column grid system, you can adjust this accordingly
+    grid-template-columns: repeat(12, 1fr);
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+}
+
+// Responsive column classes
+.col-1-of-2 {
+    grid-column: span 6; // Span 6 columns out of 12
+}
+
+.col-1-of-3 {
+    grid-column: span 4; // Span 4 columns out of 12
+}
+
+.col-2-of-3 {
+    grid-column: span 8; // Span 8 columns out of 12
+}
+
+.col-1-of-4 {
+    grid-column: span 3; // Span 3 columns out of 12
+}
+
+.col-2-of-4 {
+    grid-column: span 6; // Span 6 columns out of 12
+}
+
+.col-3-of-4 {
+    grid-column: span 9; // Span 9 columns out of 12
+}

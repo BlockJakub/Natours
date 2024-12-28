@@ -1,0 +1,78 @@
+// jQuery Mobile Responsive Styles
+
+// Base styles
+.rwd-example .ui-body {
+    text-align: left;
+    border-color: #ddd;
+}
+
+.rwd-example p {
+    color: #777;
+    line-height: 140%;
+}
+
+// Stack all blocks
+.rwd-example .ui-block-a,
+.rwd-example .ui-block-b,
+.rwd-example .ui-block-c {
+    width: 100%;
+    float: none;
+}
+
+// Collapsing borders
+.rwd-example > div + div .ui-body {
+    border-top-width: 0;
+}
+
+// Media Queries for Responsiveness
+
+// 1st Breakpoint: 42em
+@media all and (min-width: 42em) {
+    .rwd-example {
+        overflow: hidden;
+    }
+
+    .rwd-example .ui-body {
+        min-height: 14em;
+    }
+
+    .rwd-example .ui-block-b,
+    .rwd-example .ui-block-c {
+        float: left;
+        width: 49.95%;
+    }
+
+    .rwd-example > div:first-child .ui-body {
+        border-bottom-width: 0;
+    }
+
+    .rwd-example > div:last-child .ui-body {
+        border-left-width: 0;
+    }
+}
+
+// 2nd Breakpoint: 55em
+@media all and (min-width: 55em) {
+    .rwd-example .ui-body {
+        min-height: 18em;
+    }
+
+    .rwd-example .ui-block-a,
+    .rwd-example .ui-block-c {
+        float: left;
+        width: 49.95%;
+    }
+
+    .rwd-example .ui-block-b,
+    .rwd-example .ui-block-c {
+        float: left;
+        width: 24.925%;
+    }
+}
+
+// 3rd Breakpoint: 75em
+@media all and (min-width: 75em) {
+    .rwd-example .ui-body {
+        font-size: 125%;
+    }
+}
