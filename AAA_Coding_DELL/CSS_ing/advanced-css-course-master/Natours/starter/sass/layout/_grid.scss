@@ -1,0 +1,94 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+        
+        @include respond(tablet-portrait) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+
+    .footer_row {
+        max-width: $grid-width;
+        margin: 0 auto;
+        @include respond(tablet-portrait) {
+            display: grid;
+            grid-template-rows: 100%;
+            margin: 17rem;
+            
+        }
+    }
+
+    @include respond(tablet-portrait) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+    
+    @include clearfix;
+
+    [class^="col-"] {
+        float: left;
+
+        &:not(:last-child) {
+            margin-bottom: $gutter-vertical;
+
+            @include respond(tablet-portrait) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tablet-portrait) {
+            width: 100% !important;
+            max-width: 50rem;
+            padding: 0 3rem;
+        }
+    
+
+        /*.col--1 {
+            display: inline-block;
+            margin:1rem;
+            padding:13%;
+            background-image: linear-gradient(to top, gold 27%,
+            rebeccapurple 67%);
+        }*/
+    
+        .col-1-of-2 {
+            width: calc((100% - #{$gutter-horizontal}) / 2);
+            
+        }
+    
+        .col-1-of-3 {
+            width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+        }
+    
+        .col-2-of-3 {
+            width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+        }
+    
+        .col-1-of-4 {
+            width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+        }
+    
+        .col-2-of-4 {
+            width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+        }
+    
+        .col-3-of-4 {
+            width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+        }
+    }
+        /* Add a responsive class for mobile screens */
+        @include respond(phone) {
+            [class^="col-"], .col-1-of-2, .col-1-of-3, .col-2-of-3, .col-1-of-4, .col-2-of-4, .col-3-of-4 {
+                width: 100%; /* Full width for all columns on phone screens */
+                margin-right: 0; /* Remove any extra margin */
+                column-gap: 14em;
+            }
+        }
+
+    
+}

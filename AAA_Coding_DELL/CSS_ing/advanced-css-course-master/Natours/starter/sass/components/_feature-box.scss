@@ -1,0 +1,73 @@
+.feature-box {
+    display: inline-block;
+    background-color: rgba($color-white, .6);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all .3s ease-in;
+
+    @include respond(big-desktop) { // 1800px
+        padding: .7rem;
+    }
+    
+    @include respond(tablet-landscape) {  // 1200px
+        margin: 1.7rem auto;
+        padding: 1.7rem;
+    }
+
+    @include respond(tablet-portrait) {  // 900px
+        margin: 1.3rem auto;
+        padding: 2rem;
+    }
+
+    @include respond(tablet) {  // 700px
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    @include respond(phone) {  // 600px
+        display: flex;
+        flex-flow: column wrap; /* Stacks items in a single column on phone screens */
+        width: 100%;
+        margin: 1.7rem auto;
+    }
+
+    
+    &__icon {
+        font-size: 7.7rem;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(37deg,
+        gold 27%,
+        rebeccapurple 67%);
+        -webkit-background-clip: text; /* For WebKit-based browsers. Always use prefix for -webkit-background-clip with background-clip */
+        background-clip: text; /* Standard property for other browsers */
+        color:transparent;
+
+        @include respond(tablet-portrait) {
+            margin-bottom: 0;
+        }
+
+        @include respond(phone) {
+            margin: 0;
+        }
+    }
+    &:hover {
+        /* this does move up the item */
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &__text {
+        color: $color-my-color3;
+
+        @include respond(phone) {
+            font-size: 2.1rem;
+            margin: 0;
+            padding: .7rem;
+        }
+    }
+
+    
+}

@@ -1,0 +1,115 @@
+.footer {
+    background:transparent;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+
+    @include respond(tablet-landscape) {
+        padding: 8rem 0;
+        background-repeat: no-repeat;
+        
+    }
+
+    @include respond(tablet-portrait) {
+        padding: 8rem 0;
+        
+    }
+    @include respond(phone) {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 8rem;
+        
+        @include respond(tablet-landscape) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include respond(tablet-portrait) {
+            text-align: center;
+        margin-bottom: 6rem;
+        }
+
+        @include respond(tablet) {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        @include respond(phone) {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    &__logo {
+        width: 15rem;
+        height: auto;
+    }
+
+    &__navigation {
+        border-top: 1px solid rebeccapurple;
+        padding-top: 2rem;
+        display: inline-block;
+
+        @include respond(tablet-landscape) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include respond(tablet-portrait) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: gold;
+            background-color: rebeccapurple;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2sec;
+        }
+
+        &:hover,
+        &:active {
+            color: goldenrod;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+
+    }
+
+    &__copyright {
+        border-top: 1px solid rebeccapurple;
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
+
+        @include respond(tablet-portrait) {
+            width: 100%;
+            float: none;
+        }
+        @include respond(tablet-landscape) {
+            width: fit-content;
+            float: none;
+        }
+    }
+}

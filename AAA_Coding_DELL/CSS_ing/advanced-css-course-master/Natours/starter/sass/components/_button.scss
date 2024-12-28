@@ -1,0 +1,110 @@
+/* COMPONENTS ARE REUSABLE IN OTHER DIFFERENT PAGES */
+/* THE COMPONENTS HOLDS THE LAYOUT FILES TOGETHER IN SHAPE OF WEB PAGE */
+.btn {
+    &,
+    &:link,
+    &:visited {
+        /* because is it is a anchor we should add .btn:link is sudoclass. :link is special state of the selector when it is a anchor. We add also visited status    */
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        /* withouth this inline-block it would take space over the text */
+        border-radius: 10rem;
+        transition: all .2s;
+        /* the transition must be at the initial state */
+        position: relative;
+        font-size: $default-font-size;
+
+        // Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        /* the transition we add here how it should looks like */
+        transform: translateY(-3px);
+        /* trasnform: ; is very important property what moves elements around, rotate etc.*/
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+            /* helps us to make the element invisible at the end of animation */
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    &--white {
+        background-color: rebeccapurple;
+        color: $color-grey-dark;
+        
+        &::after {
+            background-color: gold;
+        }
+    }
+
+    &--green {
+        background-color: rebeccapurple;
+        color: $color-white;
+    }
+
+    &::after {
+        /* :after sudoelement, the trick is add a element what looks exactly same as the button element and put it behind the button element.
+                  and when we hover out the button element it. Then this hidden suddoelement goes behind the button element. */
+        content: '';
+        /* The content: ; property is always necessary. Otherwise it is not working */
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+
+    &--animated {
+        animation: moveInButton .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: rebeccapurple;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 1rem;
+        transition: all 1s;
+        background-color: gold;
+
+    }
+
+    &:hover {
+        background-color: rebeccapurple;
+        color:$color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .44);
+        transform:  translateY(-2px);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform:  translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        
+    }
+}
+

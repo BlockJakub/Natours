@@ -1,0 +1,186 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*  Definition of clip-path: ; -> Changes four corners of the element to change. Depends on what shape function you use(polygon() is one of examples.).
+  Every corner has X, Y directions of cutting or filling. X goes from left side to right 100% of the width of the element, Y goes from top side to 
+  bottom of the height of the element. Best is online tool https://bennettfeely.com/clippy/ for this clip-path task.
+  1) X 0% far away from left of the width of the element, Y 0%(you can use any measeurement units) from top of heaight of the elemnt
+  2) X 100% far away from left of the width of the element, Y 0% from top of the height of the element
+  3) X 100% far from left of width of the element, Y 200px(or what ever unit measurement) far from top of the height of the element 
+  3) X 100% far away from left of the width of the element, Y 75vh(viewport height) far from the top of the height of the element
+  4) X 0 far away from left of the width of the elemnt, Y 100% far away from top of the Height of the element */
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 35px;
+}
+
+/* The text-box we want in center. Therefore top: 50%; is fifty precent from left and left:50%; is fifty precent from the left. transform: translate(-50%, 50%); helps us to the element is no longer in relation with the parent element but with itself   */
+.header__text-box {
+  position: absolute;
+  top: 40%; /* The top: 40%; property is in relation to the parent element */
+  left: 50%; /* The left: 50%; property is in relation to the parent element */
+  transform: translate(-50%, -50%); /* and this property change it to relationship to itself. Then this makes the element position exactly at the center */
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; /* ease-in(starts slower then accelerate at the end of animation
+   ease-out starts faster then slower down at the end of animation */
+  /*
+  animation-delay: 1s;
+  animation-iteration-count: 3;
+  */
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.btn:link,
+.btn:visited { /* because is it is a anchor we should add .btn:link is sudoclass. :link is special state of the selector when it is a anchor. We add also visited status    */
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block; /* withouth this inline-block it would take space over the text */
+  border-radius: 10rem;
+  transition: all 0.2s; /* the transition must be at the initial state */
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover { /* the transition we add here how it should looks like */
+  transform: translateY(-3px); /* trasnform: ; is very important property what moves elements around, rotate etc.*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after { /* :after sudoelement, the trick is add a element what looks exactly same as the button element and put it behind the button element.
+   and when we hover out the button element it. Then this hidden suddoelement goes behind the button element. */
+  content: ""; /* The content: ; property is always necessary. Otherwise it is not working */
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; /* helps us to make the element invisible at the end of animation */
+}
+
+.btn--animated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}

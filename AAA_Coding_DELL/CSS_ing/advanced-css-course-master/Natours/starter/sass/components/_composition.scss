@@ -1,0 +1,209 @@
+.composition {
+    position: relative;
+    
+
+    &__photo {
+        width: 77%;
+        display: block;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
+        border-radius: 7px;
+        position: relative;
+        transition: all .2s ease-in;
+        outline-offset: .7rem;
+        
+        @include respond(big-desktop) { // 1200px
+            float: left;
+            width: 42%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+            margin: 2.7em 2.7em;            
+        }
+
+        @include respond(tablet-landscape) { // 900px
+            float: left;
+            width: 52%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+            margin: 2.7em 2.7em;            
+        }
+
+        @include respond(tablet-portrait) { // 900px
+            float: left;
+            position: relative;
+            width: 72%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);            
+        }
+
+        @include respond(tablet) {  // 700px
+            float: left;
+            width: 62%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+            margin: 2.7em 2.7em;            
+        }
+
+
+        @include respond(phone) {  // 312px
+            float: inline-start;
+            width: 52%;
+            height: auto;
+            margin: 4.7rem auto;
+        }
+
+        /*
+        &--p1 {
+            left: 0;
+            top: -2rem;
+            @include respond(big-desktop) {
+                top: -7rem;
+            }
+            @include respond(tablet-portrait) {
+                top: 7rem;
+            }
+        }
+
+        &--p2 {
+            right: 0;
+            top: 2rem;
+            @include respond(big-desktop) {
+                top: -7rem;
+            }
+            @include respond(tablet-portrait) {
+                top: 7rem;
+            }
+        }
+        &--p3 {
+            left: 20%;
+            top: 10rem;
+            @include respond(big-desktop) {
+                top: -7rem;
+            }
+            @include respond(tablet-portrait) {
+                top: 7rem;
+            }
+        }*/
+
+        &--photo1 {
+            position: relative;
+            left: 8.7rem;
+            top: -1.7rem;
+
+            @include respond(big-desktop) {
+                position: relative;
+                top: -62rem;
+                left: 127rem;
+                margin-bottom: 0;
+            }
+            @include respond(tablet-landscape) {
+                position: relative;
+                left: 27rem;
+                top: 10rem;
+            }
+
+            @include respond(tablet-portrait) {
+                position: relative;
+                width: 77%;
+                left: 2.5rem;
+                top: 10rem;
+            }
+            @include respond(tablet) {
+                top: 0;
+                transform: scale(1.17);
+            }
+
+            @include respond(phone) {
+                height: auto;
+                top: 7rem;
+                left: 7rem;
+                transform: scale(1.07);
+                z-index: 100;        
+
+            }
+        }
+
+        &--photo2 {
+            position: relative;
+            top: -7.7rem;
+            left: -1.7rem;
+
+            @include respond(big-desktop) {
+                position: relative;
+                top: -47rem;
+                left: 52rem;
+                margin-bottom: 0;
+            }
+            @include respond(tablet-landscape) {
+                position: relative;
+                left: -7rem;
+                top: 10rem;
+            }
+
+            @include respond(tablet-portrait) {
+                top: -1rem;
+                transform: scale(1.17);
+            }
+
+            @include respond(tablet) {
+                top: 0;
+                transform: scale(1.17);
+            }
+
+            @include respond(phone) {
+                width: 52%;
+                height: auto;
+                top: 7rem;
+                left: 7rem;
+                transform: scale(1.07);
+                z-index: 100;
+            }
+        }
+
+        &--photo3 {
+            position: relative;
+            left: 7.7rem;
+            top: -13.7rem;
+
+            @include respond(big-desktop) {
+                position: relative;
+                top: -67rem;
+                left: 67rem;
+                margin-bottom: 0;
+            }
+            @include respond(tablet-landscape) {
+                position: relative;
+                left: -7rem;
+                top: 10rem;
+            }
+
+            @include respond(tablet-portrait) {
+                top: -11rem;
+                left: -7rem;
+                transform: scale(1.17);
+            }
+
+            @include respond(phone) {
+                width: 67%;
+                height: auto;
+                top: 17%;
+                left: 17%;
+                transform: scale(1.07);
+                z-index: 100;
+            }
+        }
+    
+
+        &:hover {
+            outline: 1.5rem solid rebeccapurple;
+            transform: scale(1.17) translateY(-.5rem);
+            box-shadow: 3.5rem 3.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+
+            @include respond(phone) {
+                transform: scale(1.27);
+                outline: 1.3rem solid rebeccapurple;
+            }
+        }
+        /* using selector &:hover &__photo:not(:hover) { When hover on the composition  then select the photo that is nested inside of it, 
+        then the ones are not hovered. The ones images are not hovered are shrink with transform: scale(.9);*/
+        &:hover &__photo:not(:hover) {
+            transform: scale(.9);
+        }
+    }
+}
