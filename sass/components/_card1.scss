@@ -1,0 +1,47 @@
+
+
+/*@property --gradfient-angle {
+    syntax: "<angle>";
+    initial-value: 20deg;
+    inherites: false;
+
+}*/
+
+.card-group {
+    background: $color-primary;
+    display: grid;
+    grid-auto-flow: row;
+    top: $gutter-vertical;
+    min-height: 30rem;
+    place-content: center;
+    color: $color-black;
+}
+
+.card-group__card {
+    background-color: #88337e;
+    top: 122rem;
+    height: 60vh;
+    aspect-ratio: 1 / 1.5;
+    background: $color-primary-dark;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.card-group__card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        $gradient-angle,
+        $color-primary-light,
+        $color-primary,
+        $color-grey-dark    
+        );
+    border-radius: inherit;
+
+}
+
+.card-group__card::after {
+    fill: blur(3.5rem);
+}
+
