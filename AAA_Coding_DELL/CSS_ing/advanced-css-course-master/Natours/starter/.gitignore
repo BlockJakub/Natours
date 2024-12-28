@@ -1,6 +1,34 @@
 node_modules/
 dist/
 build/
+
+# System and User Directories
+AppData/
+Contacts/
+Creative Cloud Files Personal Account*
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+NTUSER.DAT*
+OneDrive/
+Saved Games/
+Searches/
+Udemy_Natours/
+github/
+ntuser.dat.*
+ntuser.ini
+
+# Editor-specific files
+.vscode/
+
+# Other common temporary files
+*.log
+*.tmp
+*.bak
+*~
 .vscode/
 *.suo
 *.user
