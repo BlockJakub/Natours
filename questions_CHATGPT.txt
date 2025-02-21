@@ -1,0 +1,4 @@
+1. How to load more then one font-size into web page by link? 400, 500, 600, 700 example in same time.
+
+2. So when I do responsive design of web page. 
+   Then is better have for example the main tittle as h1 in the middle cause of shrinking screen sizes. To keep all in the midle in view.?

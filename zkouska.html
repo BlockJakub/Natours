@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zkouska</title>
+    <style>
+        .header {
+            position: relative;
+        }
+        .text-box {
+            display: block;
+        }
+        .head-title {
+            position: absolute;
+            animation: moveInRight 1s ease-out;
+
+            backface-visibility: hidden;
+
+            
+        }
+        /* this animation moves from left bottom to right with rotation and then move up on zero position */
+        @keyframes moveInRight {
+            0% {
+                opacity: 0;
+                transform: translate(-120px, 78px) rotate(-28deg);
+            }
+
+            80% {
+                transform:  translate(10px, 28px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="text-box">
+            <span class="head-title">WELCOME VOLE</span>
+            <span class="head-title_sub">page is vole page</span>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,97 @@
+
+
+ 1. HADING h1 is IMPORTANT FOR GOOGLE or for nay other SEARCH ENGINES to figure out what our web page is about.
+
+ 2. THE values of  polygon(x y, x y, x y, x y) X starts from left to right, Y starts from top down
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+
+ 3. positioning TRANSFOROM: TRANSLATE(x, y);
+    .text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* !!! BECAUSE of declared positions in the css. 
+    Without the transform:translate(-50%, -50%) the .text-box class WOULD BE SHIFTED HALF 50% down and right. */
+
+ 4. ANIMATION, TRANSORM: TRANSLATE(x, y);
+    Means the element moves in x and y directions. The we have animation-titming-function: ease-in(ease-in-out, linear, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1), steps(4, end), frames(10))
+    When we do the animation sometimes can be shaky. So we need use backface-visibility: hidden;
+    It provide us to not shake with the animated element.
+
+    To use the animation again for different element we just write the animation: moveInLeft 1s ease-in; It will use the moveInLeft keyframes with speed 1s and ease-in.
+
+5. PSEUDO - ELEMENTS and PSEUDO - CLASSES (HOW and WHY TO USE THE ::after PSEUDO-ELEMENT) example how to use creative hover effect using the transition property.
+
+   .btn:link,
+   .btn:visited ARE the status of btn link, btn visited(these are states when you hover over the elementsbutton or anchor)
+
+   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   !!!! display: inline-block; Is inline block we use when we need ad aditional spacing padding around the element !!!!!!!
+   📌 Why Use inline-block?
+      ✔ Allows padding & margins to work properly.
+      ✔ Allows elements to sit side by side (unlike block, which forces a new line).
+      ✔ Works well with text-align: center; on the parent.
+    🔥 How It Works
+            The child is inline-block, so it stays inline but allows spacing.
+            text-align: center; on the parent makes the child align horizontally centered.
+    ✅ So yes! inline-block is perfect when you need padding & want to center elements with text-align: center;! 🚀😃   
+   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   !!! box-shadow: offset in the X direction, Y offset direction, blur, color rgba();
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+======================================================================================================================
+-=====================================================================================================================
+6. !!! THREE PILARS OF WRITE GOOD HTML AND CSS !!!!! 
+    A. RESPONSIVE DESIGN = Fluid Layouts
+                         = Media Queries
+                         = Responsive Images
+                         = Correct Units
+                         = Desktop-firsrt vs Mobile-firsrt
+
+
+    B. MAINTAINABLE AND SCALABLE CODE = Clean
+                                      = Easy-to-understand
+                                      = Growth
+                                      = Reusable
+                                      = How to organize files
+                                      = How to name CLASSES
+                                      = How to structure HTML
+    
+    C. WEB PERFORMANCE = Less HTTP requests (the user nedd download less data)
+                       = Less CODE
+                       = Compress CODE
+                       = Use a CSS preprocessor
+                       = Use Less images (use only neccessary images for our we site)
+                       = Compress images (less bandwith dor user) 
+
+============================================================================================================
+============================================================================================================
+
+7. WHAT HAPPEND TO CSS WHEN WE LOAD UP A WEBPAGE ON THE BROWSER WHEN USER OPENS THE PAGE?
+      A. Laod HTML ----> Parse HTML ------------------------>  Document Object MODEL (DOM)  --------------->|
+                            |                                                                               |
+                            |                                                                               |
+                            |               PARSE CSS                                                       |
+                        Load CSS  -----> Resolve conflicting                                                |
+                                         CSS declarations (cascade)                                         |
+                                         ===========================   ---->  CSS Object Model              |
+                                         Process final CSS values           (CSSOM = CSS Object Model)----->|
+                                                                                                            |
+                                                                                                            |
+                                                                                                            |
+                          FINAL RENDERED <-------------------  Website rendering:       <----------------- RENDER TREE
+                            WEBSITE                        The visual formatting model
+=================================================================================================================
+==================================================================================================================
+
+8. SPECIFICITY IMPORTANCE
+      A. Inline styles
+      B. IDs
+      C. Classes, pseudo-classes, attribute
+      D. Elements, pseudo-elements
+    - So we calculate these (Inline, IDs, Classes, Elements).
+    - If all specificity is equal then the last decleration will be understand
+9. UNIT VALUES 
