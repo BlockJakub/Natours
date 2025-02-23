@@ -1,0 +1,69 @@
+/* all about the buttons component */
+
+/* SUDOCLASS :link state of the button, when the hovered or the button is clicked. 
+    :visited state when you visit link it change the color to purple that is the default state of button element.
+       Therefore we want the link color same as at the begining */
+       .btn {
+        &:link,
+        &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.5rem 4rem;
+            display: inline-block;
+            border-radius: 10rem;
+            transition: all .2s;
+            /* the transition property must be on initial state what is the .btn:link and .btn:visited or it doesn't work.
+          Simply we saying here in parent element the transition can be used on all properties */
+            position: relative;
+        }
+    
+        /* then on :hover we say how it should look like and on the :active state same */
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    
+            &::after {
+                /* we want the ::after sudo element only when is the .btn hovered */
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        }
+    
+        /* when we click the button box-shadow property is less see as we click the button in real world thanks the blur value*/
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5rem 1rem rgba($color-black, .2);
+        }
+    
+        &--white {
+            background-color: $color-white;
+            color: $color-grey-dark;
+    
+            &::after {
+                background-color: $color-white;
+            }
+        }
+    
+    
+        /* ::after SUDO element we giving to it looks exactly same as the button we have, but is hidden behind the button and when we hover it hides.  */
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-radius: 10rem;
+            position: absolute;
+            /* !!!! THE position:absolute needs to have a reference and the reference is the first element with the relative postion that can find. In this case it is the header. But we want it hidden behind the button so we must give position: relative; to btn:link, .btn:visited.  !!!!!!!!!!! */
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* now it is behind the button */
+            transition: all .4s;
+            /* <---- The transition: all .4s; needs to be in initial state btn element(.btn::after {}), because we have the ::after SUDO element when is hovered transform: scale(1.5) animation. */
+        }
+    
+        &--animated {
+            animation: moveInBottom .5s ease-out .75s;
+            animation-fill-mode: backwards;
+        }
+    }

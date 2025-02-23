@@ -1,0 +1,24 @@
+/* THIS FILE SUPPOSE TO HOLD THE BASICS OF PAGE
+    A basic definitions about the project    */
+
+/* BASIC RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* good practice to do*/
+}
+
+html {
+    // THIS DEFINES WHAT ONE REM IS
+    font-size: 62.5%;
+    /* 10 / 16 = 0.625 * 100 = 62.5% */
+}
+
+body {
+    box-sizing: border-box;
+    /* good practice to do like this with the body{border-box: box-sizing;} and in * {border-box:inherit;} */
+}
+

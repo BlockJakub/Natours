@@ -1,0 +1,10 @@
+.row {
+    max-width: $grid-width; // it means if smaller the 114 rem it will fill the available space
+    background-color: #d24141;
+    margin: 0 auto;
+    margin-bottom: $gutter-vertical;
+}
+
+.col {
+    background: rebeccapurple;
+}
