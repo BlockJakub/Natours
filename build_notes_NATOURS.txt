@@ -94,4 +94,134 @@
       D. Elements, pseudo-elements
     - So we calculate these (Inline, IDs, Classes, Elements).
     - If all specificity is equal then the last decleration will be understand
+
 9. UNIT VALUES 
+
+
+
+
+
+
+
+
+===============================================================================================
+===============================================================================================
+*********** INSTAL SASS in CMD BY NODEjs ******************************
+===============================================================================================
+===============================================================================================
+🚀 Complete Guide: Setting Up Sass to Watch SCSS Files in a New Project
+===============================================================================================
+   --If you're starting a new project and want to use Sass to compile and watch your SCSS files, follow this step-by-step guide.
+
+🔹 Step 1: Initialize a New Project (If Not Done Yet)
+   If you haven't already, create a new project folder and set up npm:
+    CMD 
+      mkdir my-sass-project
+      cd my-sass-project
+      npm init -y  # Creates a package.json file
+      This will generate a package.json file to manage your project's dependencies.
+
+🔹 Step 2: Install Sass
+   Instead of node-sass (which is deprecated), install the latest sass package:
+     CMD
+      npm install sass --save-dev
+      This will add sass as a development dependency in package.json.
+
+🔹 Step 3: Create Your Project Structure
+     Inside your project folder, create the following structure:
+
+         YOUR ROOT FOLDER
+         my-sass-project/
+         │── src/
+         │   ├── scss/
+         │   │   ├── main.scss  (Your main SCSS file)
+         │── dist/
+         │   ├── css/ (Compiled CSS files will go here)
+         │── package.json
+         Run this command to create the necessary folders and files quickly:
+    
+      CMD 
+         mkdir -p src/scss dist/css
+         echo "// Your SCSS code here" > src/scss/main.scss
+
+🔹 Step 4: Set Up a Watch Command
+      To automatically compile SCSS to CSS whenever you make changes, add this script in your package.json:
+
+      Open package.json and find the "scripts" section. Replace it with:
+
+         IN json Copy Edit
+            "scripts": {
+              "sass": "sass src/scss/main.scss dist/css/main.css",
+              "watch": "sass --watch src/scss/main.scss:dist/css/main.css"
+            }
+
+🔹 Step 5: Start Watching for Changes
+      Run the following command to automatically compile your SCSS every time you save a file:
+
+      CMD 
+         npm run watch
+      This will:
+      ✅ Watch src/scss/main.scss
+      ✅ Compile it into dist/css/main.css whenever changes are detected
+
+🔹 Step 6: Write Some SCSS and Test
+      Open src/scss/main.scss and add some test styles: TO TEST IF THE WATCH SASS WORKS?
+         SCSS file
+            $primary-color: #3498db;
+
+            body {
+              background-color: $primary-color;
+              font-family: Arial, sans-serif;
+            }
+            
+            h1 {
+              color: white;
+              text-align: center;
+            }
+         Save the file, and Sass will automatically compile it into dist/css/main.css.
+
+🎯 Final Tips
+If you want to compile multiple SCSS files, you can run:
+
+sh
+Copy
+Edit
+sass --watch src/scss:dist/css
+This will compile all .scss files in src/scss into dist/css.
+
+If you ever want to stop watching, press CTRL + C in your terminal.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+IN THIS CASE I HAVE USED MY SETTINGS
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    package.json file
+         {
+            "name": "starter",
+            "version": "1.0.0",
+            "description": "Landing page for Natours",
+            "main": "index.js",
+            "scripts": {
+              "sass": "sass scss/main.scss css/main.css",
+              "watch": "sass --watch scss:css", 
+              "start": "live-server"
+            },
+            "author": "",
+            "license": "ISC",
+            "devDependencies": {
+              "sass": "^1.85.0"
+            }
+         }           
+
+   I START WATCH SASS with COMMAND "npm run watch" in CMD and the LIVE SERVER with COMMAND "live-server" in CMD  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+🎉 Done!
+Now your project is set up with Sass watching your SCSS files and compiling them to CSS automatically! 🚀
+
+Let me know if you have any questions! 😃
+
+END OF SASS SETUP IN NODE AND CMD
+=========================================================================================================
+=========================================================================================================
