@@ -4,7 +4,7 @@
   "description": "Landing page for Natours - A project from Jonas Schmedtmann's Udemy course.",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass --watch sass/main.scss --output css",
     "start": "live-server"
   },
   "repository": {

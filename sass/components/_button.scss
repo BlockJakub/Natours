@@ -3,7 +3,7 @@
 /* SUDOCLASS :link state of the button, when the hovered or the button is clicked. 
     :visited state when you visit link it change the color to purple that is the default state of button element.
        Therefore we want the link color same as at the begining */
-       .btn {
+    .btn {
         &:link,
         &:visited {
             text-transform: uppercase;
@@ -15,6 +15,7 @@
             /* the transition property must be on initial state what is the .btn:link and .btn:visited or it doesn't work.
           Simply we saying here in parent element the transition can be used on all properties */
             position: relative;
+            font-size: $default-font-size;
         }
     
         /* then on :hover we say how it should look like and on the :active state same */
@@ -65,5 +66,31 @@
         &--animated {
             animation: moveInBottom .5s ease-out .75s;
             animation-fill-mode: backwards;
+        }
+    }
+
+    .btn-text {
+        &:link,
+        &:visited {
+            font-size: $default-font-size;
+            color: $color-primary;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1 px solid $color-primary;
+            padding: 3px;
+            transition: all .2s;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, .15);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+            transform: translateY(0);
+
         }
     }

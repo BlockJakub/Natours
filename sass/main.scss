@@ -1,20 +1,22 @@
-
+// Import abstracts
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+// Import base styles
 @import "base/base";
 @import "base/animations";
 @import "base/typography";
 @import "base/utilities";
 
+// Import components
 @import "components/button";
+@import "components/composition";
+@import "components/feature-box";
 
+// Import layout styles
+@import "layout/grid";
 @import "layout/header";
 
+// Import pages
 @import "pages/home";
-
-
-
-
-

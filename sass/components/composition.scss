@@ -1,0 +1,40 @@
+.composition {
+    position: relative;
+    
+    &__photo {
+        width: 55%; // THE % PRECENTAGE IS IMPORTANT CAUSE THE SCALABILITY OF IMAGES
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4); // THE BOX SHADOW IS LOVER HERE LOOKS FAR AWAY IMAGE 
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: all .3s;
+        outline-offset: 2rem; //GIVES THE SPACE BETWEEN THE BORDERS AND THE IMAGE ELEMENT
+        
+        &--p1 {
+            left: 0;
+            top: -2rem;
+        }
+
+        &--p2 {
+            right: 0;
+            top: 2rem;
+        }
+
+        &--p3 {
+            left: 20%; // THE % PRECENTAGE IS IMPORTANT CAUSE THE SCALABILITY OF IMAGES
+            top: 10rem;
+            
+        }
+
+        &:hover {
+            outline: 1.5rem solid $color-primary; // MAKES THE BORDER OF IMAGE ELEMENT
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5); // THE SHADOW IS MORE HIGHER TO CLOSE UP THE IMAGE ON HOVER
+            z-index: 20; // important for hover
+        }
+    }
+
+    &:hover &__photo:not(:hover) {  // EXPLANATION When you hover the .composition element comosition:hover then select the photo is nested inside of it composition__photo:not(:hover) then select that is not hovered
+        transform: scale(.95);
+    }
+}
