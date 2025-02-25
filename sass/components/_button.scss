@@ -1,5 +1,5 @@
 /* all about the buttons component */
-
+@use '../abstracts/variables' as *;
 /* SUDOCLASS :link state of the button, when the hovered or the button is clicked. 
     :visited state when you visit link it change the color to purple that is the default state of button element.
        Therefore we want the link color same as at the begining */
@@ -42,6 +42,15 @@
     
             &::after {
                 background-color: $color-white;
+            }
+        }
+
+        &--green {
+            background-color: $color-primary;
+            color: $color-grey-dark;
+    
+            &::after {
+                background-color: $color-primary;
             }
         }
     

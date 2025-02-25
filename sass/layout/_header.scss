@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as *;
 
 .header {
     height: 95vh;
@@ -8,7 +9,8 @@
     background-position: top;
     position: relative;
     /* THE values of  polygon(x y, x y, x y, x y) */
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);;
 
     &__logo-box {
         position: absolute;

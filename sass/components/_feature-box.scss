@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 .feature-box {
     background-color: rgba($color-white, .8);
     font-size: 1.5rem;
@@ -13,6 +15,7 @@
         display: inline-block;
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
+        background-clip: text;
         color: transparent;
         /* display:inline-block provides out off normal flow, bg-image:is image, 
         webkit-background-clip::text clipping the image to text, THEN you must also make the text color:transparent */

@@ -1,4 +1,4 @@
-// Import abstracts
+
 @use "abstracts/functions" as *;
 @use "abstracts/mixins" as *;
 @use "abstracts/variables" as *;
@@ -11,8 +11,11 @@
 
 // Import components
 @use "components/button";
+@use "components/card";
 @use "components/composition";
 @use "components/feature-box";
+@use "components/story";
+
 
 // Import layout styles
 @use "layout/grid";

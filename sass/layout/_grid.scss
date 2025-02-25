@@ -1,5 +1,6 @@
 // _grid.scss
-
+@use '../abstracts/variables' as *;
+@use "../abstracts/mixins" as mixins;
 .row {
     max-width: $grid-width; // it means if smaller than 114 rem it will fill the available space
     margin: 0 auto;
@@ -9,7 +10,7 @@
         margin-bottom: $gutter-vertical;
     }
 
-    @include clearfix;
+    @include mixins.clearfix;
 
     [class^="col-"] {
         float: left;
