@@ -4,8 +4,9 @@
   "description": "Landing page for Natours - A project from Jonas Schmedtmann's Udemy course.",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass --watch sass/main.scss --output css",
-    "start": "live-server"
+    "sass": "sass --watch sass/main.scss:css/style.css",
+    "live-server": "live-server",
+    "start": "npm-run-all --parallel sass live-server"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,11 @@
   "author": "Jonas Schmedtmann (Course Instructor) | Modified by Kuba",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "autoprefixer": "^10.4.20",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.85.1"
   }
 }

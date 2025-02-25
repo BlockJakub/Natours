@@ -1,22 +1,22 @@
 // Import abstracts
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@use "abstracts/functions" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/variables" as *;
 
 // Import base styles
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilities";
+@use "base/base";
+@use "base/animations";
+@use "base/typography";
+@use "base/utilities";
 
 // Import components
-@import "components/button";
-@import "components/composition";
-@import "components/feature-box";
+@use "components/button";
+@use "components/composition";
+@use "components/feature-box";
 
 // Import layout styles
-@import "layout/grid";
-@import "layout/header";
+@use "layout/grid";
+@use "layout/header";
 
 // Import pages
-@import "pages/home";
+@use "pages/home";

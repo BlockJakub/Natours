@@ -198,23 +198,39 @@ IN THIS CASE I HAVE USED MY SETTINGS
 
     package.json file
          {
-            "name": "starter",
-            "version": "1.0.0",
-            "description": "Landing page for Natours",
-            "main": "index.js",
-            "scripts": {
-              "sass": "sass scss/main.scss css/main.css",
-              "watch": "sass --watch scss:css", 
-              "start": "live-server"
-            },
-            "author": "",
-            "license": "ISC",
-            "devDependencies": {
-              "sass": "^1.85.0"
-            }
-         }           
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for Natours - A project from Jonas Schmedtmann's Udemy course.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:css/style.css",
+    "live-server": "live-server",
+    "start": "npm-run-all --parallel sass live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YourUsername/natours.git"
+  },
+  "keywords": [
+    "travel",
+    "landing-page",
+    "sass",
+    "css",
+    "html"
+  ],
+  "author": "Jonas Schmedtmann (Course Instructor) | Modified by Kuba",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.85.1"
+  }
+}          
 
-   I START WATCH SASS with COMMAND "npm run watch" in CMD and the LIVE SERVER with COMMAND "live-server" in CMD  
+   I START WATCH SASS with COMMAND "npm start" in CMD and all in one(sass + live-server) start working  
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 🎉 Done!
