@@ -4,14 +4,14 @@
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: $color-white;
+    background-color: rgba($color-white, .6); // this makes the boxes white
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
-
+    /* THE .story__shape element IS A CONTAINER FOR THE .story__image (the image) */ 
     &__shape {
         // in this case is !demanding! important have a width:; height:; float:; or the shape-outside: circle(); not working
         width: 15rem;
@@ -23,13 +23,44 @@
         clip-path: circle(50% at 50% 50%);
         //in this case CAUSE of Float property use the transform:translate();
         transform: translateX(-3rem) skewX(12deg);
+        position: relative; // __caption needs the container position relative
     }
 
     &__img {
         height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden; // IS SOMETIMES IMPORTANT IT HELPS FIX THE AWKWSARD
+        transition: all .5s;
     }
 
     &__text {
         transform: skewX(12deg);
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // Správné vycentrování
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+
+    }
+    
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%); // Správné vycentrování i při hoveru
+    }
+    
+
+    &:hover &__img {
+        transform: translateX(-4rem ) scale(1);
+        filter: blur(3px) brightness(80%);
+
     }
 }

@@ -2,3 +2,7 @@
 
 2. So when I do responsive design of web page. 
    Then is better have for example the main tittle as h1 in the middle cause of shrinking screen sizes. To keep all in the midle in view.?
+
+3. THE css can't have a transform property at the same time on the same element? AM I RIGHT?
+
+4. WHEN some awkward things appears when you have the tranform: translate(); The backface-visibility: hidden; // can fix the awkwardnes.

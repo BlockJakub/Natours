@@ -1,0 +1,99 @@
+@use "../abstracts/variables" as *;
+
+.form {
+
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        border: none;
+        border-bottom: 3px solid transparent; // intial border status set transparent when click then is the  &__input:focus {border-bottom: 3px solid $color-primary; or it will move the input on click
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+
+        &:focus {
+            outline: none; // you rewritting the default outline of the input to none or what ever color you want
+            box-shadow: 0 1rem 2rem rgba($color-black, .1); // Because it is outline none therefore we need make the input visible with the box-shadow property
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+    }
+
+    &__label {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block; // Display block must be here or the margin-left: and margin-top will not work
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0; //The opacity Must be here or we can't animate in this case
+        visibility: hidden; // visibility:hidden; Must be here because it will be still on the page
+        transform: translateY(-4rem);
+    }
+
+
+    &__radio-group  {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-button {
+        height: 3rem; // THESE PROPERTIES WORKS ONLY IF IS DISPLAY: BLOCK, INLINE-BLOCK
+        width: 3rem;  // THESE PROPERTIES WORKS ONLY IF IS DISPLAY: BLOCK, INLINE-BLOCK
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute; // doesn't need to be RELATIVE but must be specified
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {  // EXPLANATION OF THE PSEUDO SELECTOR   when you hit the label element the radio input becomes checked then the sibling 
+        opacity: 1;
+    }
+}
