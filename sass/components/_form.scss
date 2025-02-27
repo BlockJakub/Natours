@@ -40,7 +40,7 @@
         font-weight: bold;
         margin-left: 2rem;
         margin-top: .7rem;
-        display: block; // Display block must be here or the margin-left: and margin-top will not work
+        display: inline-block; // Display block must be here or the margin-left: and margin-top will not work
         transition: all .3s;
     }
 
@@ -62,6 +62,7 @@
 
     &__radio-label {
         font-size: $default-font-size;
+        line-height: 3.7rem;
         cursor: pointer;
         position: relative;
         padding-left: 4.5rem;

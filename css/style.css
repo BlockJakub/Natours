@@ -119,23 +119,23 @@ body {
 }
 
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-margin-top-big {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .bg-video {
@@ -163,7 +163,7 @@ body {
   /* when we click the button box-shadow property is less see as we click the button in real world thanks the blur value*/
   /* ::after SUDO element we giving to it looks exactly same as the button we have, but is hidden behind the button and when we hover it hides.  */
 }
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -174,6 +174,8 @@ body {
   Simply we saying here in parent element the transition can be used on all properties */
   position: relative;
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -184,9 +186,10 @@ body {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px);
-  box-shadow: 0 5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn--white {
   background-color: #fff;
@@ -450,7 +453,7 @@ body {
   font-weight: bold;
   margin-left: 2rem;
   margin-top: 0.7rem;
-  display: block;
+  display: inline-block;
   transition: all 0.3s;
 }
 .form__input:placeholder-shown + .form__label {
@@ -467,6 +470,7 @@ body {
 }
 .form__radio-label {
   font-size: 1.6rem;
+  line-height: 3.7rem;
   cursor: pointer;
   position: relative;
   padding-left: 4.5rem;
@@ -619,6 +623,54 @@ body {
   text-align: center;
 }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #f7f7f7;
+}
+.footer__logo-box {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.footer__logo {
+  width: 15rem;
+  height: auto;
+}
+.footer__navigation {
+  border-top: 1px solid #777;
+  padding-top: 2rem;
+  display: inline-block;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__item {
+  display: inline-block;
+}
+.footer__item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.footer__link:link, .footer__link:visited {
+  color: #f7f7f7;
+  background-color: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.footer__link:hover, .footer__link:active {
+  color: #7ed56f;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transform: rotate(5deg) scale(1.3);
+}
+.footer__copyright {
+  border-top: 1px solid #777;
+  padding-top: 2rem;
+  width: 80%;
+  float: right;
+}
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -658,11 +710,10 @@ body {
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem;
 }
 .book__form {
   width: 50%;
-  padding: 6rem;
+  padding: 6.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */

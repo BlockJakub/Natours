@@ -4,6 +4,7 @@
     :visited state when you visit link it change the color to purple that is the default state of button element.
        Therefore we want the link color same as at the begining */
     .btn {
+        &,
         &:link,
         &:visited {
             text-transform: uppercase;
@@ -16,6 +17,10 @@
           Simply we saying here in parent element the transition can be used on all properties */
             position: relative;
             font-size: $default-font-size;
+
+            //Change for the <button> element
+            border: none;
+            cursor: pointer;
         }
     
         /* then on :hover we say how it should look like and on the :active state same */
@@ -31,9 +36,11 @@
         }
     
         /* when we click the button box-shadow property is less see as we click the button in real world thanks the blur value*/
-        &:active {
+        &:active,
+        &:focus {
+            outline: none;
             transform: translateY(-1px);
-            box-shadow: 0 5rem 1rem rgba($color-black, .2);
+            box-shadow: 0 .5rem 1rem rgba($color-black, .2);
         }
     
         &--white {

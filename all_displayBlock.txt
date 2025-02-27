@@ -1,0 +1,84 @@
+======================================================
+Guide to display: block; and display: inline-block;
+======================================================
+
+============================================================================================
+1️⃣ display: block;
+
+    A block-level element takes up the full width of its parent container by default.
+    
+    It starts on a new line and stacks vertically.
+    
+    You can control width, height, margin, and padding.
+    
+    Common block elements: <div>, <p>, <section>, <article>, <footer>, <header>.
+    
+    How to Center a Block Element?
+    
+    Since block elements take full width, text-align: center; won’t work directly.
+    
+    Instead, use margin: 0 auto; (if it has a width).
+        
+        .container {
+            width: 50%;
+            margin: 0 auto; /* Centers the block */
+        }
+
+========================================================================================
+2️⃣ display: inline-block;
+
+    Similar to inline, but respects width and height.
+    
+    Doesn’t take full width; it only takes as much as needed.
+    
+    Common inline-block elements: <button>, <img>, <input>.
+    
+    How to Center an inline-block Element?
+    
+    Since inline-block elements behave like text, you can use text-align: center; on the parent container.
+
+        .container {
+            text-align: center; /* Centers inline-block elements */
+        }
+
+        .item {
+          display: inline-block;
+        }
+    📌 Key Difference: text-align affects inline and inline-block, but not block elements directly.
+
+================================================================================================
+3️⃣ align-items vs. text-align
+
+    text-align works on inline and inline-block elements inside a parent.
+    
+    align-items works only inside flexbox containers (display: flex;) and aligns items vertically.
+    
+    Centering with Flexbox (align-items)
+    
+    If you use display: flex;, align-items centers elements vertically.
+
+        .container {
+            display: flex;
+            align-items: center; /* Centers items vertically */
+            justify-content: center; /* Centers items horizontally */
+            height: 100vh;
+        }
+    📌 Use align-items for flexbox, text-align for inline elements, and margin: auto; for blocks!
+
+====================================================================================================
+ ----------------   SUMMARY -------------------------
+ ===================================================================================================
+
+ Quick Summary:
+
+Property                        Works On                               What It Does
+
+display: block;                Block elements                        Full width, new line
+
+display: inline-block;        Inline-like elements                   Width & height respected
+
+text-align: center;         Parent of inline/inline-block elements   Centers them horizontally
+
+align-items: center;          Flexbox container                      Centers items vertically
+
+margin: 0 auto;             Block elements with a width               Centers horizontally
