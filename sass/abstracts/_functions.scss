@@ -1,0 +1,27 @@
+/* abstract/_functions.scss */
+
+@use "sass:map"; // Importuje modul map pro práci s mapami
+
+$breakpoints: (
+    phone: (max: 37.5em), // 600px
+    tablet: (max: 56.25em), // 900px
+    tab-land: (max: 75em), // 1200px
+    big-desktop: (min: 112.5em) // 1800px - This applies when the screen is wider than 1800px.
+);
+
+/* Breakpoint Mixin */
+@mixin respond($breakpoint) {
+    @if map.has-key($breakpoints, $breakpoint) {
+        $bp: map.get($breakpoints, $breakpoint); // Get the map value (min or max)
+        
+        @if map.has-key($bp, max) {
+            @media (max-width: map.get($bp, max)) { @content; }
+        }
+        
+        @if map.has-key($bp, min) {
+            @media (min-width: map.get($bp, min)) { @content; }
+        }
+    } @else {
+        @warn "Breakpoint #{$breakpoint} not found in $breakpoints map.";
+    }
+}

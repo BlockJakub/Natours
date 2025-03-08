@@ -1,5 +1,8 @@
+
 /* THIS FILE SUPPOSE TO HOLD THE BASICS OF PAGE
     A basic definitions about the project    */
+
+@use '../abstracts/functions' as *;
 
 /* BASIC RESET */
 *,
@@ -13,8 +16,19 @@
 
 html {
     // THIS DEFINES WHAT ONE REM IS
-    font-size: 62.5%;
-    /* 10 / 16 = 0.625 * 100 = 62.5% */
+    font-size: 62.5%; // 10 / 16 = 0.625 * 100% = 62.5% 
+/* remember always the larger one before the smaller one. Therefore the tab-land is first then the tablet */
+    @include respond(tab-land) { // width < 1200
+        font-size: 56.25%; // 0.5625*16px = 9px   1rem = 9px, 9/16 = 0.5625 * 100% = 56.25%
+    }
+
+    @include respond(tablet) {  // width < 900?
+        font-size: 50%;  // 1 rem = 8px, 8/16 = 0.5 * 100% = 50%
+    }
+
+    @include respond(big-desktop) { 
+        font-size: 75%; // 1rem = 12px, 12/16 = 0.75 * 100 = 75%
+    }
 }
 
 body {

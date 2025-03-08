@@ -1,6 +1,9 @@
 // _grid.scss
+@use '../abstracts/functions' as *;
 @use '../abstracts/variables' as *;
 @use "../abstracts/mixins" as mixins;
+
+
 .row {
     max-width: $grid-width; // it means if smaller than 114 rem it will fill the available space
     margin: 0 auto;
@@ -8,6 +11,10 @@
     &:not(:last-child) {
         // &:not(:last-child) means select everything and NOT the last child
         margin-bottom: $gutter-vertical;
+
+        @include respond(tablet) {
+            margin-right: $gutter-vertical-small;
+        }
     }
 
     @include mixins.clearfix;
@@ -17,6 +24,14 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+        }
+
+        @include respond(tablet) {
+            margin-right: 0;
+        }
+
+        @include respond(tablet) {
+            width: 100% !important;
         }
     }
 

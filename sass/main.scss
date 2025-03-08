@@ -1,28 +1,29 @@
-
+// 1. Abstracts (foundational SCSS)
 @use "abstracts/functions" as *;
 @use "abstracts/mixins" as *;
 @use "abstracts/variables" as *;
 
-// Import base styles
+// 2. Base styles (e.g., typography, animations, utilities, reset)
 @use "base/base";
 @use "base/animations";
 @use "base/typography";
 @use "base/utilities";
 
-// Import components
+// 3. Components (UI building blocks)
 @use "components/bg-video";
 @use "components/button";
-@use "components/card";
 @use "components/composition";
+@use "components/card";
 @use "components/feature-box";
-@use "components/form";
 @use "components/story";
+@use "components/form";
+@use "components/popup";
 
-
-// Import layout styles
+// 4. Layout styles (grid, header, footer, etc.)
 @use "layout/grid";
+@use "layout/navigation";
 @use "layout/header";
 @use "layout/footer";
 
-// Import pages
+// 5. Pages (page-specific styles)
 @use "pages/home";
