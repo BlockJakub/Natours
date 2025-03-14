@@ -1,3 +1,4 @@
+@use "../abstracts/functions" as *;
 @use "../abstracts/variables" as *;
 
 body {
@@ -7,7 +8,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
 }
 
 
@@ -24,6 +24,11 @@ body {
         font-weight: 700;
         letter-spacing: 3.5rem;
         animation: moveInRight .9s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &--sub {
@@ -32,6 +37,10 @@ body {
         font-weight: 400;
         letter-spacing: 1.5rem;
         animation: moveInLeft 1.3s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -46,6 +55,14 @@ body {
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
 
 
     &:hover {

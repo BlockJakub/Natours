@@ -1,0 +1,57 @@
+ ================  Media Queries Guide (Desktop-First Approach)  =============================
+    1️⃣ General Rules
+        ✅ Always start with the largest screen first (Desktop-First).
+        ✅ Test changes on real devices to ensure the breakpoints work as expected.
+        ✅ Use consistent breakpoints across your project.
+
+    2️⃣ Standard Breakpoints (Desktop-First)
+
+        /* Breakpoints:
+        0 - 600px: Phone  
+        600 - 900px: Tablet Portrait  
+        900 - 1200px: Tablet Landscape  
+        1200 - 1800px: Default styles apply  
+        1800px + : Large Desktop */
+    
+    3️⃣ Media Query Mixin for SCSS
+        This mixin makes it easier to write media queries in your project.
+
+        // abstracts/_mixins.scss
+        @mixin respond($breakpoint) {
+            @if $breakpoint == phone {
+                @media (max-width: 600px) { @content };
+            } 
+            @else if $breakpoint == tab-port {
+                @media (max-width: 900px) { @content };
+            } 
+            @else if $breakpoint == tab-land {
+                @media (max-width: 1200px) { @content };
+            } 
+            @else if $breakpoint == big-desktop {
+                @media (min-width: 1800px) { @content };
+            }
+        }
+    4️⃣ Example Usage in SCSS
+        Now, you can use the mixin in your styles.
+
+        // base/_base.scss
+        @use '../abstracts/mixins' as *;
+        
+        html {
+            font-size: 62.5%; // Default
+        
+            @include respond(phone) { font-size: 50%; } // Smaller font on mobile
+        }
+    5️⃣ Key Takeaways
+        ✔ Always write the largest screen styles first, then adjust downwards.
+        ✔ Test on real devices to ensure accuracy.
+        ✔ Use SCSS mixins to simplify your media queries.
+
+======================= TESTING =====================================================
+
+on all devices, and make it proper everything.
+For that you can use online web https://sizzy.co where you type your web site URL and you can check the media querries
+
+======================================================================================
+
+

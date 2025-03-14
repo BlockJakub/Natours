@@ -1,13 +1,16 @@
 /* abstract/_functions.scss */
-
+                  // Imports module map to work with maps
 @use "sass:map"; // Importuje modul map pro práci s mapami
 
 $breakpoints: (
     phone: (max: 37.5em), // 600px
-    tablet: (max: 56.25em), // 900px
+    tab-port: (max: 56.25em), // 900px
     tab-land: (max: 75em), // 1200px
     big-desktop: (min: 112.5em) // 1800px - This applies when the screen is wider than 1800px.
 );
+
+/* =================================================================
+    ORDER APPLYING THE MEDIA QUERIES ON ELEMENTS: Base + Typography > general layout + grid > page layout + components
 
 /* Breakpoint Mixin */
 @mixin respond($breakpoint) {

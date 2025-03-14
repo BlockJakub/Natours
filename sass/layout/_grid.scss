@@ -5,16 +5,21 @@
 
 
 .row {
-    max-width: $grid-width; // it means if smaller than 114 rem it will fill the available space
+    max-width: $grid-width; // it means if smaller than $grid-width 114 rem it will fill the available space
     margin: 0 auto;
 
     &:not(:last-child) {
         // &:not(:last-child) means select everything and NOT the last child
         margin-bottom: $gutter-vertical;
 
-        @include respond(tablet) {
-            margin-right: $gutter-vertical-small;
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
         }
+    }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem; 
     }
 
     @include mixins.clearfix;
@@ -24,13 +29,14 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
         }
 
-        @include respond(tablet) {
-            margin-right: 0;
-        }
-
-        @include respond(tablet) {
+        @include respond(tab-land) {
             width: 100% !important;
         }
     }
