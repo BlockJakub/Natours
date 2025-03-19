@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     
     
-    <link rel="stylesheet" type="text/css" href="css/icon-font.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/icon-font.css"> THIS IS COMMENTED OUT, BECAUSE IT IS INCLUDED BY "concat-css" in the packge.json and spited in css/style.css file -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
@@ -60,19 +60,41 @@
             </div>
             <div class="row">
                 <div class="col-1-of-2">
-                    <h3 class="heading-tertiary u-margin-bottom-small">You going to dell in love with nature</h3>
-                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia quam sed provident blanditiis saepe magnam ipsum quos debitis, deleniti enim iusto odit earum fugit eveniet consequuntur voluptas deserunt corporis ullam!</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">You going to fell in love with nature</h3>
+                    <p class="paragraph">You’re going to fall in love with nature as you experience its breathtaking beauty and calming presence. 
+                        From vibrant landscapes to serene moments, nature has a way of capturing your heart and leaving you with unforgettable memories.</p>
                 
-                    <h3 class="heading-tertiary u-margin-bottom-small">LIve adventures like you never have before</h3>
-                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia quam sed provident blanditiis saepe magnam ipsum quos debitis, deleniti enim iusto odit earum fugit eveniet consequuntur voluptas deserunt corporis ullam!</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
+                    <p class="paragraph">Live adventures like you never have before by stepping out of your comfort zone and embracing the unknown. 
+                        Whether it’s exploring new places, trying thrilling activities, or meeting new people, every moment becomes an exciting opportunity for growth.</p>
                     <a href="#" class="btn-text">Learn more &rarr;</a>
 
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
+
+                        <img class="composition__photo composition__photo--p1" 
+                            srcset="img/nat-1.jpg, 300w, img/nat-1-large.jpg 1000w" 
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 1"
+                            src="img/nat-1-large.jpg">
+
+                            <img class="composition__photo composition__photo--p2" 
+                            srcset="img/nat-2.jpg, 300w, img/nat-2-large.jpg 1000w" 
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 2"
+                            src="img/nat-2-large.jpg">
+
+                            <img class="composition__photo composition__photo--p3" 
+                            srcset="img/nat-3.jpg, 300w, img/nat-3-large.jpg 1000w" 
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3"
+                            src="img/nat-3-large.jpg">
+                        <!--
                         <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
                         <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        -->
                     </div>
                 </div>
             </div>
@@ -85,7 +107,11 @@
                     <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-world"></i>
                         <h3 class="heading-tertiary">Explore the world</h3>
-                        <p class="feature-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore delectus ut, ab a eaque inventore unde. </p>
+                        <p class="feature-box__text">Exploring the world opens up new experiences and broadens your perspective. 
+                            Embrace adventure by traveling to different countries, learning about diverse cultures, and meeting new people. 
+                            Stay curious and be open to trying new foods, activities, and traditions. 
+                            Traveling not only enriches your life but also helps you grow personally. 
+                            Whether near or far, each journey offers opportunities for learning, self-discovery, and unforgettable memories that shape a more fulfilled life.</p>
                     </div>
                 </div>
 
@@ -93,7 +119,10 @@
                     <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-compass"></i>
                         <h3 class="heading-tertiary">Meet nature</h3>
-                        <p class="feature-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore delectus ut, ab a eaque inventore unde. </p>
+                        <p class="feature-box__text">Meeting nature allows you to reconnect with the earth and find peace in its beauty. Spend time outdoors, whether hiking through forests, swimming in lakes, or simply walking in a park. 
+                            Observe the wildlife, enjoy the fresh air, and listen to the sounds of nature. 
+                            Being in nature reduces stress, boosts creativity, and improves overall well-being. 
+                            The more you explore the natural world, the deeper your appreciation and connection will grow.</p>
                     </div>
                 </div>
 
@@ -101,7 +130,11 @@
                     <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-map"></i>
                         <h3 class="heading-tertiary">Find your way</h3>
-                        <p class="feature-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore delectus ut, ab a eaque inventore unde. </p>
+                        <p class="feature-box__text">Finding your way is about discovering your true purpose and path in life. 
+                            Take time for self-reflection, exploring your passions, strengths, and values. 
+                            Set goals that align with your vision and take small, consistent steps toward achieving them. 
+                            Embrace challenges as opportunities for growth and learning. 
+                            By staying focused, being patient with yourself, and trusting your intuition, you'll uncover the direction that brings fulfillment, balance, and happiness in your life.</p>
                     </div>
                 </div>
 
@@ -109,7 +142,11 @@
                     <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-heart"></i>
                         <h3 class="heading-tertiary">Live healtier life</h3>
-                        <p class="feature-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore delectus ut, ab a eaque inventore unde. </p>
+                        <p class="feature-box__text">Living a healthier life involves making mindful choices that benefit both your body and mind. 
+                            Start by incorporating regular exercise, such as walking or yoga, to improve physical fitness. 
+                            Eat a balanced diet with plenty of fruits, vegetables, and whole grains while avoiding processed foods. 
+                            Prioritize sleep for mental clarity and recovery. 
+                            Lastly, practice stress management through activities like meditation or journaling to maintain emotional well-being and overall health.</p>
                     </div>
                 </div>
             </div>
@@ -256,7 +293,9 @@
                     </figure>
                     <div class="story__text">
                         <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, neque nesciunt excepturi ut natus voluptatem libero aliquam ex. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, neque nesciunt excepturi ut natus voluptatem libero aliquam ex. Illo, !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
+                        <p>I had the best week ever with my family, filled with laughter, adventures, and unforgettable moments. 
+                            We explored new places, enjoyed delicious meals together, and created memories that will last a lifetime. 
+                            It was a week of love and connection. !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
                     </div>
                 </div>
             </div>
@@ -269,7 +308,8 @@
                     </figure>
                     <div class="story__text">
                         <h3 class="heading-tertiary u-margin-bottom-small">Wow my life is completely different</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, neque nesciunt excepturi ut natus voluptatem libero aliquam ex. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, neque nesciunt excepturi ut natus voluptatem libero aliquam ex. Illo, !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
+                        <p>Wow, my life is completely different now. I've embraced new opportunities, faced challenges head-on, and grown in ways I never imagined. 
+                            The changes have brought me closer to my goals, and each day feels like a step toward a brighter future. !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
                     </div>
                 </div>
             </div>
@@ -332,7 +372,21 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img class="footer__logo" src="img/logo-green-2x.png" alt="Full logo">
+
+            <picture class="footer__logo">
+
+                <source 
+                    srcset="img/logo-green-small-1x.png 1x, img/logo-green-2x.png 2x" 
+                    media="(max-width: 37.5em)"><!--THE media="" atribute specify the max-width: 600px(37.5em) and then we choosethe image in srcset="" atribute in case the width is lower then 600px  -->
+                <img 
+                    class="footer__logo" 
+                    srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                    src="img/logo-green-2x.png" 
+                    alt="Full logo" 
+                    src="img/logo-green-2x.png">
+            </picture>
+            <!-- Move (copy, paste) the class footer__logo from the image into the <picture>nbsp;</picture> element. -->
+            <!-- THE sourceset srcset="" atribute allowing us to choose the best image for the situation. WE CALL THIS AS DENSITY SWITCHING-->
         </div>
 
         <div class="row">
@@ -360,6 +414,11 @@
         <div class="popup__content">
             <div class="popup__left">
                 <img class="popup__img" src="img/nat-8.jpg" alt="tour photo">
+                <img class="popup__img" 
+                            srcset="img/nat-8.jpg, 300w" 
+                            sizes="(max-width:900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            alt="tour photo"
+                            src="img/nat-8.jpg">
                 <img class="popup__img" src="img/nat-9.jpg" alt="tour photo">
             </div>
             <div class="popup__right">

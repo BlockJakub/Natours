@@ -27,14 +27,20 @@
         // in this case is !demanding! important have a width:; height:; float:; or the shape-outside: circle(); not working
         width: 15rem;
         height: 15rem;
-        float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%); // shape-outside: circle(radius of circle, "at" 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        float: left;        
         //in this case CAUSE of Float property use the transform:translate();
         transform: translateX(-3rem) skewX(12deg);
         position: relative; // __caption needs the container position relative
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%); // shape-outside: circle(radius of circle, "at" 50% 50%);
+            border-radius: none;
+        }
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);

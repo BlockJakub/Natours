@@ -38,6 +38,12 @@
 
         @include respond(tab-land) {
             width: 100% !important;
+            padding: .7rem 2.7rem;
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
+            padding: 1.7rem 2.7rem;
         }
     }
 

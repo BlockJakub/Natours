@@ -50,8 +50,8 @@ body {
     font-weight: 700;
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    background-clip: text;
     -webkit-background-clip: text; // the background going to be clippeed to the text exactly where the text is we do not see the background but the text
+    background-clip: text;
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;

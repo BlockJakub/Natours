@@ -1,0 +1,215 @@
+=========================================================================================================
+======================== NPM (NodeJs) GUIDE Explanation in package.json file  ================================================
+    EVERY ONE NODE PACKAGE HAS OWN WEB PAGE. TYPE IN GOOGLE NPM (package name)
+        -- Where you can find all importants about the node package
+==============================================================================================================================
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for Natours - A project from Jonas Schmedtmann's Udemy course.",
+  "main": "index.js",
+  "scripts": {
+    // THIS THREE LINES ARE DEVELOPMENT PROCESS TASKS FOR NODEJS
+    "sass": "sass --watch sass/main.scss:css/style.css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver sass",
+
+    // THESE FOUR LINES ARE BUILDING PROCESS TASKS FOR NODEJS
+    "concat-css": "npx concat -o css/style.concat.css css/icon-font.css css/style.css css/style.comp.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress-css": "sass css/style.prefix.css css/style.css --style compressed",
+    "build-css": "npm-run-all sass concat-css prefix-css compress-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlockJakub/natours.git"
+  },
+  "keywords": [
+    "travel",
+    "landing-page",
+    "sass",
+    "css",
+    "html"
+  ],
+  "author": "Jonas Schmedtmann (Course Instructor) | Modified by Kuba",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.85.1"
+  }
+}
+
+
+=========================================================================================================
+
+It  is part of the build process for creating a website environment. 
+It's a configuration file for a Node.js project, specifically package.json, which helps you manage development tools, dependencies, and build scripts for your website. 
+
+++++++++++++++++++++++++++++
+1. Project Details
+        File package.json
+++++++++++++++++++++++++++++
+
+        {
+          "name": "natours",
+          "version": "1.0.0",
+          "description": "Landing page for Natours - A project from Jonas Schmedtmann's Udemy course.",
+          "main": "index.js",
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/YourUsername/natours.git"
+          },
+          "keywords": [
+            "travel",
+            "landing-page",
+            "sass",
+            "css",
+            "html"
+          ],
+          "author": "Jonas Schmedtmann (Course Instructor) | Modified by Kuba",
+          "license": "MIT"
+        }
+
+    -- These fields describe your project: name: The name of your project (natours).
+                                           version: The version of your project (1.0.0).
+                                           description: A brief description of what the project is about.
+                                           main: This usually points to the main entry JavaScript file (index.js), though in this case, it's more relevant for backend projects.
+                                           repository: The link to the project’s repository (in case you're using version control like Git).
+                                           keywords: Relevant keywords for searching or indexing the project (e.g., for discoverability).
+                                           author: Who is responsible for the project.
+                                           license: The license under which the project is shared (e.g., MIT).
+
++++++++++++++++++++++++++++++
+2. Scripts
+   package.json file
++++++++++++++++++++++++++++++
+
+        "scripts": {
+            "sass": "sass --watch sass/main.scss:css/style.css",
+            "live-server": "live-server",
+            "start": "npm-run-all --parallel sass live-server",
+            "concat-css": "concat -o css/style.concat.css css/icon-font.css css/style.css css/style.comp.css"
+        }
+    -- These scripts define tasks that can be run with npm run <script-name>. 
+    
+    Here's what each one does:  
+        sass: 
+        sass --watch sass/main.scss:css/style.css
+        This command uses Sass (CSS preprocessor) to watch the main.scss file and automatically compile it into a regular CSS file (style.css) when changes occur. 
+        Sass is an extension of CSS that allows for variables, nesting, and other features that make styling more maintainable.
+
+        live-server:
+        live-server
+        This runs a local development server (often used during development). 
+        It serves your project and automatically refreshes the browser when you make changes to files. Useful for real-time development.
+
+        start:
+        npm-run-all --parallel sass live-server
+        This runs two scripts simultaneously: It starts the sass command to watch for changes in scss files. 
+                                              It also runs live-server to keep the development server running and auto-refreshing.
+
+        concat-css:
+        concat -o css/style.concat.css css/icon-font.css css/style.css css/style.comp.css
+        This uses concat-cli (a command-line tool for combining files) to concatenate multiple CSS files (e.g., icon-font.css, style.css, and style.comp.css) into a single output file (style.concat.css). 
+        This is often done to reduce the number of HTTP requests a browser needs to make to load your page.
+
++++++++++++++++++++++++++++++++++++
+3. Dependencies and DevDependencies
++++++++++++++++++++++++++++++++++++
+
+        "devDependencies": {
+          "autoprefixer": "^10.4.20",
+          "concat": "^1.0.3",
+          "node-sass": "^9.0.0",
+          "npm-run-all": "^4.1.5",
+          "postcss-cli": "^11.0.0",
+          "sass": "^1.85.1"
+        }
+
+    -- These are packages that are necessary for development. DevDependencies are packages you need only during development, not in production.
+
+        autoprefixer:
+        A tool that automatically adds vendor prefixes to CSS rules (e.g., -webkit-, -moz-, etc.) to ensure your styles work across all browsers. 
+        It’s particularly useful when using newer CSS features.
+
+        concat:
+        This is the package used by your concat-css script to combine multiple CSS files into one.
+
+        node-sass:
+        A package that allows Node.js to compile Sass (SCSS) files into CSS. 
+        Note that node-sass is being replaced by sass, but it's still in use here.
+
+        npm-run-all:
+        A package that allows you to run multiple npm scripts concurrently or sequentially. 
+        For example, it’s used to run both sass and live-server in parallel when you run npm start.
+
+        postcss-cli:
+        A tool that processes CSS with plugins, like Autoprefixer. 
+        It's useful when you want to optimize or modify your CSS after compilation.
+
+        sass:
+        The package that allows you to write Sass (SCSS) instead of plain CSS, making it easier to manage styles.
+
++++++++++++++++++++++++++
+4. Why Do You Need This?
++++++++++++++++++++++++++
+    -- This package.json is helping you automate a lot of the tasks that are needed for front-end web development. Here’s why you need it:
+
+CSS Processing: You’re using Sass, which improves the maintainability of your CSS code. 
+                This setup compiles your SCSS into standard CSS and can handle things like vendor prefixes (via Autoprefixer) and minification/compression.
+
+Live Development: Live Server makes it easy to see your changes in real-time as you develop your website. 
+                  Instead of manually refreshing the browser, the server auto-updates for you.
+
+Concatenation: By using the concat tool, you are combining multiple CSS files into one file, reducing HTTP requests. 
+               This is an optimization technique for performance.
+
+Efficiency: The npm-run-all package allows you to run multiple tasks at once (like Sass compilation and running the live server) without needing to type multiple commands.
+
+=================================================
+5. How to Use This in Your Development Workflow?
+==================================================
+
+Install Dependencies: Run this command to install the packages specified in the devDependencies section:
+    bash
+    Copy code
+    npm install
+    This installs everything you need for development.
+
+Watch for SCSS Changes: Use the following command to automatically compile SCSS to CSS as you work:
+
+    bash
+    Copy code
+    npm run sass
+    Start Live Server:
+    To run the live development server:
+
+    bash
+    Copy code
+    npm run live-server
+    Run Everything Simultaneously:
+    Use the following command to start both the SCSS watcher and the live server:
+
+    bash
+    Copy code
+    npm run start
+    Concatenate CSS Files:
+    If you want to concatenate your CSS files (e.g., combining icon-font.css, style.css, and style.comp.css into one file), run:
+
+    bash
+    Copy code
+    npm run concat-css
+
+=======================================================================
+           CONCLUSION
+=======================================================================
+This setup streamlines your workflow and ensures your development process is efficient. 
+It saves you time and reduces manual errors when compiling SCSS, applying CSS optimizations, or running a live development server. 
+This environment is common in modern web development for managing CSS, live reloading, and automating build tasks.
+
+
+

@@ -12,7 +12,14 @@
     opacity: 0; //the popup can't see but is still sitting on page
     visibility: hidden; // the popup disapear from page
     transition: all .3s;
+    
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
 
+    
     
     &__content {
         @include absCenter;
@@ -49,20 +56,20 @@
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
-
-        column-count: 2; //it creates 2 columns
+        
         -moz-column-count: 2; //it creates 2 columns
+        column-count: 2; //it creates 2 columns
 
-        column-gap: 4rem; // 1em is font-size of the currentelement 1em = 14px;
         -moz-column-gap: 4rem;
+        column-gap: 4rem; // 1em is font-size of the currentelement 1em = 14px;
 
         -moz-column-rule: 1px solid $color-grey-light-2;
         column-rule: 1px solid $color-grey-light-2;
 
-        hyphens: auto;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
+        hyphens: auto;
     }
     
     // THE POPUP IS OPEN states

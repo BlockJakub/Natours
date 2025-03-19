@@ -4,17 +4,35 @@
 @use "../abstracts/variables" as *;
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url("../img/hero.jpg");
+    height: 85vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, .8), 
+        rgba($color-tertiary-light, .8)), 
+        url("../img/hero-small.jpg");
 
     background-size: cover;
     /* what ever size of viewport image fit in */
     background-position: top;
     position: relative;
     /* THE values of  polygon(x y, x y, x y, x y) */
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
     
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), // <<-- first condition
+            (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), // <<-- second condition
+            (min-width: 125em) {  //  <<-- These are a conditions what goes through then under the code is applyied
+        background-image: linear-gradient(
+            to right bottom, 
+            rgba($color-primary-light, .8), 
+            rgba($color-secondary-dark, .8)), 
+            url("../img/hero.jpg");
+    }
+
     @include respond(tab-port) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

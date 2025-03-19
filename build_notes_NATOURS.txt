@@ -112,4 +112,41 @@
 
 ================================== MEDIA QUERRY  ==================================
 
-     
+
+
+
+
+================================= Responsive Images ========================
+
+We can control which image the browser loads by using the srcset attribute, which provides multiple image sources of different resolutions. 
+This technique is called density switching, where the browser selects the most appropriate image based on the device's pixel density (e.g., standard vs. high-resolution screens).
+
+If the viewport width is less than 600px (37.5em), the browser selects the appropriate image source based on the defined conditions. 
+If the viewport width is greater than 600px, we can specify a different image using srcset and media queries. This approach is known as art direction, where different images are used for different screen sizes to optimize composition and user experience.
+
+
++++++++++++++++++++++++++++++++++++++++++++++ Browser Compatibility Guide == Cross-Browser Support Checker ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   The page you're referring to helps you check which web features work in different browsers. This is typically called "browser compatibility" or "browser support".
+   These terms convey that the page helps users understand which web features are supported across various browsers.
+   GO TO WEB SITE www.caniuse.com It searches in what browser you can use what properties.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++ BUILDING PROCESS NodeJs in package.json file. Tasks for NodeJs ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+"scripts": {
+    "sass": "sass --watch sass/main.scss:css/style.css",
+    "live-server": "live-server",
+    "start": "npm-run-all --parallel sass live-server",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css"
+  },
+=========================================================================================
+
+"devDependencies": {
+    "autoprefixer": "^10.4.20",  for this you need have installed "post-cli" in dependencies
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.85.1"
+  }
