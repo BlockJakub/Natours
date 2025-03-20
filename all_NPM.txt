@@ -9,16 +9,13 @@
   "description": "Landing page for Natours - A project from Jonas Schmedtmann's Udemy course.",
   "main": "index.js",
   "scripts": {
-    // THIS THREE LINES ARE DEVELOPMENT PROCESS TASKS FOR NODEJS
+    "start": "npm-run-all --parallel devserver sass",
+    "build": "npm-run-all sass concat-css prefix-css compress-css",
     "sass": "sass --watch sass/main.scss:css/style.css",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver sass",
-
-    // THESE FOUR LINES ARE BUILDING PROCESS TASKS FOR NODEJS
     "concat-css": "npx concat -o css/style.concat.css css/icon-font.css css/style.css css/style.comp.css",
     "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
-    "compress-css": "sass css/style.prefix.css css/style.css --style compressed",
-    "build-css": "npm-run-all sass concat-css prefix-css compress-css"
+    "compress-css": "sass css/style.prefix.css css/style.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -42,6 +39,7 @@
     "sass": "^1.85.1"
   }
 }
+
 
 
 =========================================================================================================
@@ -89,11 +87,14 @@ It's a configuration file for a Node.js project, specifically package.json, whic
 +++++++++++++++++++++++++++++
 
         "scripts": {
+            "start": "npm-run-all --parallel devserver sass",
+            "build": "npm-run-all sass concat-css prefix-css compress-css",
             "sass": "sass --watch sass/main.scss:css/style.css",
-            "live-server": "live-server",
-            "start": "npm-run-all --parallel sass live-server",
-            "concat-css": "concat -o css/style.concat.css css/icon-font.css css/style.css css/style.comp.css"
-        }
+            "devserver": "live-server",
+            "concat-css": "npx concat -o css/style.concat.css css/icon-font.css css/style.css css/style.comp.css",
+            "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+            "compress-css": "sass css/style.prefix.css css/style.css --style compressed"
+        },
     -- These scripts define tasks that can be run with npm run <script-name>. 
     
     Here's what each one does:  
@@ -175,34 +176,26 @@ Efficiency: The npm-run-all package allows you to run multiple tasks at once (li
 ==================================================
 
 Install Dependencies: Run this command to install the packages specified in the devDependencies section:
-    bash
-    Copy code
-    npm install
+    bash, Copy code
+        npm install
     This installs everything you need for development.
 
 Watch for SCSS Changes: Use the following command to automatically compile SCSS to CSS as you work:
-
-    bash
-    Copy code
-    npm run sass
-    Start Live Server:
+    bash, Copy code
+        npm run sass
+    
+Start Live Server: 
     To run the live development server:
-
-    bash
-    Copy code
-    npm run live-server
-    Run Everything Simultaneously:
+    bash, Copy code
+        npm run live-server
+Run Everything Simultaneously:
     Use the following command to start both the SCSS watcher and the live server:
-
-    bash
-    Copy code
-    npm run start
-    Concatenate CSS Files:
+    bash, Copy code
+        npm run start
+Concatenate CSS Files:
     If you want to concatenate your CSS files (e.g., combining icon-font.css, style.css, and style.comp.css into one file), run:
-
-    bash
-    Copy code
-    npm run concat-css
+    bash, Copy code
+        npm run concat-css
 
 =======================================================================
            CONCLUSION
@@ -211,5 +204,32 @@ This setup streamlines your workflow and ensures your development process is eff
 It saves you time and reduces manual errors when compiling SCSS, applying CSS optimizations, or running a live development server. 
 This environment is common in modern web development for managing CSS, live reloading, and automating build tasks.
 
+✅ 1. npm run start
+  What it does: npm-run-all --parallel devserver sass
+    devserver: Starts Live Server to serve your site and open it in the browser.
+    sass: Runs the Sass compiler and watches for changes (--watch). Every time you edit SCSS, it compiles into css/style.css.
 
+  When to use it: While actively coding, testing, and making changes.
+                  Automatically updates the browser with your latest SCSS changes.
+  
+  Important: This does not run concatenation, prefixing, or compression. It’s for development only.
 
+✅ 2. npm run build
+  What it does: npm-run-all sass concat-css prefix-css compress-css
+    This runs four tasks in sequence: sass: Compiles your SCSS into css/style.css.
+                                            concat-css: Combines multiple CSS files (e.g., icon-font.css, style.css, and style.comp.css) into one file css/style.concat.css.
+                                            prefix-css: Uses Autoprefixer to add vendor prefixes for browser compatibility, outputting to css/style.prefix.css.
+                                            compress-css: Compresses (minifies) style.prefix.css into css/style.css, making it smaller and faster for production.
+  When to use it: When you're ready to deploy your project or test a production build.
+                  It makes sure your CSS is optimized.
+                  It won’t watch for changes like start does. You’ll need to run npm run build again if you make further edits.
+
+  🤔 Why Two Commands?
+    npm run start is for development. It keeps everything live and updates on every save.
+    npm run build is for production. It generates the optimized final files.
+
+  🚀 In Short:
+    
+        For coding and seeing changes live: npm run start
+    
+        When you are done and want to create optimized files for deployment: npm run build
