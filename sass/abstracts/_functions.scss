@@ -15,16 +15,18 @@ $breakpoints: (
 /* Breakpoint Mixin */
 @mixin respond($breakpoint) {
     @if map.has-key($breakpoints, $breakpoint) {
-        $bp: map.get($breakpoints, $breakpoint); // Get the map value (min or max)
+        $bp: map.get($breakpoints, $breakpoint);
 
         @if map.has-key($bp, max) {
-            $max: map.get($bp, max); // Extract the max value
-            @media only screen and (max-width: #{$max}) { @content; }
+            @media only screen and (max-width: #{map.get($bp, max)}) {
+                @content;
+            }
         }
 
         @if map.has-key($bp, min) {
-            $min: map.get($bp, min); // Extract the min value
-            @media only screen and (min-width: #{$min}) { @content; }
+            @media only screen and (min-width: #{map.get($bp, min)}) {
+                @content;
+            }
         }
     } @else {
         @warn "Breakpoint #{$breakpoint} not found in $breakpoints map.";

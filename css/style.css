@@ -385,6 +385,11 @@ body {
   height: 50rem;
   /*  ============================== media query for cards  ========================================== */
 }
+@media only screen and (max-width: 75em) {
+  .card {
+    margin: 2rem auto;
+  }
+}
 .card__side {
   height: 52rem;
   transition: all 0.8s ease;

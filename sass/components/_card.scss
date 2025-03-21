@@ -9,6 +9,10 @@
     position: relative;
     height: 50rem;
 
+    @include respond(tab-land) {
+        margin: 2rem auto;
+    }
+
     &__side {
         height: 52rem;
         transition: all .8s ease;
