@@ -1,5 +1,6 @@
-@use '../abstracts/variables' as *;
 @use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
 
 .card {
 
@@ -180,6 +181,7 @@
         border-radius: 3px;
         background-color: $color-white;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
 
         &__side {
             height: auto;
