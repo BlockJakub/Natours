@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Contact | Natours</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-box">
+            <img class="header__logo" src="/img/logo-white.png" alt="logo">
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Natours</span>
+                <span class="heading-primary--sub">Contact Us</span>
+            </h1>
+            <a class="btn btn--white btn--animated" href="/">Back to Home</a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-contact u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Contact Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="book__form">
+                        <form id="contactForm" class="form">
+                            <div class="form__group">
+                                <input type="text" name="name" class="form__input" placeholder="Your Name" required>
+                                <label for="name" class="form__label">Your Name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" name="email" class="form__input" placeholder="Your Email" required>
+                                <label for="email" class="form__label">Your Email</label>
+                            </div>
+                            <div class="form__group">
+                                <textarea name="message" class="form__input" placeholder="Your Message" required
+                                    style="height:120px;"></textarea>
+                                <label for="message" class="form__label">Your Message</label>
+                            </div>
+                            <div class="form__group">
+                                <button type="submit" class="btn btn--green">Send</button>
+                            </div>
+                        </form>
+                        <div id="contactMsg" class="u-margin-top-small"></div>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <picture>
+                        <source srcset="/img/768x1024/nat-8-768x1024.webp" media="(min-width: 769px)">
+                        <source srcset="/img/320x480/nat-8-320x480.webp" media="(max-width: 768px)">
+                        <img src="/img/nat-8.jpg" alt="Contact" style="width:100%;max-width:400px;">
+                    </picture>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <picture class="footer__logo">
+                <source srcset="/img/logo-green-small-1x.png 1x, /img/logo-green-2x.png 2x" media="(max-width: 37.5em)">
+                <img class="footer__logo" srcset="/img/logo-green-1x.png 1x, /img/logo-green-2x.png 2x"
+                    src="/img/logo-green-2x.png" alt="Full logo">
+            </picture>
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="company.html" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="contact.html" class="footer__link">Contact</a></li>
+                        <li class="footer__item"><a href="careers.html" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="privacy.html" class="footer__link">Privacy</a></li>
+                        <li class="footer__item"><a href="terms.html" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
+                        class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    
-    
+
+
     <!-- <link rel="stylesheet" type="text/css" href="css/icon-font.css"> THIS IS COMMENTED OUT, BECAUSE IT IS INCLUDED BY "concat-css" in the packge.json and spited in css/style.css file -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -27,11 +27,21 @@
 
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>01</span>About
+                        Natours</a>
+                </li>
+                <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>02</span>Your
+                        benefits</a>
+                </li>
+                <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>03</span>Popular
+                        tours</a>
+                </li>
+                <li class="navigation__item"><a href="#section-stories"
+                        class="navigation__link"><span>04</span>Stories</a>
+                </li>
+                <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>05</span>Book
+                        now</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -47,12 +57,12 @@
                 <span class="heading-primary--sub">is where life happens</span>
             </h1>
             <!-- HEADING h1 is IMPORTANT FOR GOOGLE or for nay other SEARCH ENGINES to figure out what our web page is about -->
-            <a class="btn btn--white btn--animated" href="#">Discover our tours</a>
+            <a class="btn btn--white btn--animated" href="#section-tours">Discover our tours</a>
         </div>
     </header>
 
     <main class="main">
-        <section class="section-about">
+        <section class="section-about" id="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Exciting tours for adventure people
@@ -61,98 +71,111 @@
             <div class="row">
                 <div class="col-1-of-2">
                     <h3 class="heading-tertiary u-margin-bottom-small">You going to fell in love with nature</h3>
-                    <p class="paragraph">You’re going to fall in love with nature as you experience its breathtaking beauty and calming presence. 
-                        From vibrant landscapes to serene moments, nature has a way of capturing your heart and leaving you with unforgettable memories.</p>
-                
+                    <p class="paragraph">You’re going to fall in love with nature as you experience its breathtaking
+                        beauty and calming presence.
+                        From vibrant landscapes to serene moments, nature has a way of capturing your heart and leaving
+                        you with unforgettable memories.</p>
+
                     <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
-                    <p class="paragraph">Live adventures like you never have before by stepping out of your comfort zone and embracing the unknown. 
-                        Whether it’s exploring new places, trying thrilling activities, or meeting new people, every moment becomes an exciting opportunity for growth.</p>
+                    <p class="paragraph">Live adventures like you never have before by stepping out of your comfort zone
+                        and embracing the unknown.
+                        Whether it’s exploring new places, trying thrilling activities, or meeting new people, every
+                        moment becomes an exciting opportunity for growth.</p>
                     <a href="#" class="btn-text">Learn more &rarr;</a>
 
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
 
-                        <img class="composition__photo composition__photo--p1" 
-                            srcset="img/nat-1.jpg, 300w, img/nat-1-large.jpg 1000w" 
-                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                            alt="Photo 1"
-                            src="img/nat-1-large.jpg">
+                        <img class="composition__photo composition__photo--p1"
+                            srcset="img/nat-1.jpg, 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 1"
+                            src="img/320x480/nat-1-320x213.webp">
 
-                            <img class="composition__photo composition__photo--p2" 
-                            srcset="img/nat-2.jpg, 300w, img/nat-2-large.jpg 1000w" 
-                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                            alt="Photo 2"
-                            src="img/nat-2-large.jpg">
+                        <img class="composition__photo composition__photo--p2"
+                            srcset="img/nat-2.jpg, 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 2"
+                            src="img/320x480/nat-2-320x213.webp">
 
-                            <img class="composition__photo composition__photo--p3" 
-                            srcset="img/nat-3.jpg, 300w, img/nat-3-large.jpg 1000w" 
-                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                            alt="Photo 3"
+                        <img class="composition__photo composition__photo--p3"
+                            srcset="img/nat-3.jpg, 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 3"
                             src="img/nat-3-large.jpg">
-                        <!--
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
-                        -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-features">
-            
+        <section class="section-features" id="section-features">
+
             <div class="row">
                 <div class="col-1-of-4">
-                    <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
+                    <div class="feature-box">
+                        <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-world"></i>
                         <h3 class="heading-tertiary">Explore the world</h3>
-                        <p class="feature-box__text">Exploring the world opens up new experiences and broadens your perspective. 
-                            Embrace adventure by traveling to different countries, learning about diverse cultures, and meeting new people. 
-                            Stay curious and be open to trying new foods, activities, and traditions. 
-                            Traveling not only enriches your life but also helps you grow personally. 
-                            Whether near or far, each journey offers opportunities for learning, self-discovery, and unforgettable memories that shape a more fulfilled life.</p>
+                        <p class="feature-box__text">Exploring the world opens up new experiences and broadens your
+                            perspective.
+                            Embrace adventure by traveling to different countries, learning about diverse cultures, and
+                            meeting new people.
+                            Stay curious and be open to trying new foods, activities, and traditions.
+                            Traveling not only enriches your life but also helps you grow personally.
+                            Whether near or far, each journey offers opportunities for learning, self-discovery, and
+                            unforgettable memories that shape a more fulfilled life.</p>
                     </div>
                 </div>
 
                 <div class="col-1-of-4">
-                    <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
+                    <div class="feature-box">
+                        <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-compass"></i>
                         <h3 class="heading-tertiary">Meet nature</h3>
-                        <p class="feature-box__text">Meeting nature allows you to reconnect with the earth and find peace in its beauty. Spend time outdoors, whether hiking through forests, swimming in lakes, or simply walking in a park. 
-                            Observe the wildlife, enjoy the fresh air, and listen to the sounds of nature. 
-                            Being in nature reduces stress, boosts creativity, and improves overall well-being. 
-                            The more you explore the natural world, the deeper your appreciation and connection will grow.</p>
+                        <p class="feature-box__text">Meeting nature allows you to reconnect with the earth and find
+                            peace in its beauty. Spend time outdoors, whether hiking through forests, swimming in lakes,
+                            or simply walking in a park.
+                            Observe the wildlife, enjoy the fresh air, and listen to the sounds of nature.
+                            Being in nature reduces stress, boosts creativity, and improves overall well-being.
+                            The more you explore the natural world, the deeper your appreciation and connection will
+                            grow.</p>
                     </div>
                 </div>
 
                 <div class="col-1-of-4">
-                    <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
+                    <div class="feature-box">
+                        <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-map"></i>
                         <h3 class="heading-tertiary">Find your way</h3>
-                        <p class="feature-box__text">Finding your way is about discovering your true purpose and path in life. 
-                            Take time for self-reflection, exploring your passions, strengths, and values. 
-                            Set goals that align with your vision and take small, consistent steps toward achieving them. 
-                            Embrace challenges as opportunities for growth and learning. 
-                            By staying focused, being patient with yourself, and trusting your intuition, you'll uncover the direction that brings fulfillment, balance, and happiness in your life.</p>
+                        <p class="feature-box__text">Finding your way is about discovering your true purpose and path in
+                            life.
+                            Take time for self-reflection, exploring your passions, strengths, and values.
+                            Set goals that align with your vision and take small, consistent steps toward achieving
+                            them.
+                            Embrace challenges as opportunities for growth and learning.
+                            By staying focused, being patient with yourself, and trusting your intuition, you'll uncover
+                            the direction that brings fulfillment, balance, and happiness in your life.</p>
                     </div>
                 </div>
 
                 <div class="col-1-of-4">
-                    <div class="feature-box"> <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
+                    <div class="feature-box">
+                        <!-- ITIS A COMPONENT. The feature-box class is here cause not to affect the grid shape. THERFORE IS ANOTHER BOX INSIDE THE col-1-of-4 PURPOSE TO scale() the feature-box -->
                         <i class="feature-box__icon icon-basic-heart"></i>
                         <h3 class="heading-tertiary">Live healtier life</h3>
-                        <p class="feature-box__text">Living a healthier life involves making mindful choices that benefit both your body and mind. 
-                            Start by incorporating regular exercise, such as walking or yoga, to improve physical fitness. 
-                            Eat a balanced diet with plenty of fruits, vegetables, and whole grains while avoiding processed foods. 
-                            Prioritize sleep for mental clarity and recovery. 
-                            Lastly, practice stress management through activities like meditation or journaling to maintain emotional well-being and overall health.</p>
+                        <p class="feature-box__text">Living a healthier life involves making mindful choices that
+                            benefit both your body and mind.
+                            Start by incorporating regular exercise, such as walking or yoga, to improve physical
+                            fitness.
+                            Eat a balanced diet with plenty of fruits, vegetables, and whole grains while avoiding
+                            processed foods.
+                            Prioritize sleep for mental clarity and recovery.
+                            Lastly, practice stress management through activities like meditation or journaling to
+                            maintain emotional well-being and overall health.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most polpular tours
@@ -186,7 +209,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£297</p>
                                 </div>
-                                <a class="btn btn--white" href="#popup">Book Now</a>
+                                <a class="btn btn--white book-now-btn" href="#section-book">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -218,7 +241,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£497</p>
                                 </div>
-                                <a class="btn btn--white" href="#popup">Book Now</a>
+                                <a class="btn btn--white book-now-btn" href="#section-book">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -251,7 +274,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£897</p>
                                 </div>
-                                <a class="btn btn--white" href="#popup">Book Now</a>
+                                <a class="btn btn--white book-now-btn" href="#section-book">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -260,14 +283,14 @@
 
             <!-- ====================== BUTTON GREEN ==============================================-->
             <div class="u-center-text u-margin-top-big">
-                <a href="#" class="btn btn--green">Discover all tours</a>
+                <a href="#section-tours" class="btn btn--green">Discover all tours</a>
             </div>
         </section>
 
         <!-- ====================================================================  -->
         <!-- =======================    STORIES    ================================-->
 
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
             <!-- .bg-video  IS A COMPONENT-->
             <div class="bg-video">
                 <video class="bg-video__content" autoplay mutted loop>
@@ -293,8 +316,10 @@
                     </figure>
                     <div class="story__text">
                         <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
-                        <p>I had the best week ever with my family, filled with laughter, adventures, and unforgettable moments. 
-                            We explored new places, enjoyed delicious meals together, and created memories that will last a lifetime. 
+                        <p>I had the best week ever with my family, filled with laughter, adventures, and unforgettable
+                            moments.
+                            We explored new places, enjoyed delicious meals together, and created memories that will
+                            last a lifetime.
                             It was a week of love and connection. !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
                     </div>
                 </div>
@@ -308,42 +333,47 @@
                     </figure>
                     <div class="story__text">
                         <h3 class="heading-tertiary u-margin-bottom-small">Wow my life is completely different</h3>
-                        <p>Wow, my life is completely different now. I've embraced new opportunities, faced challenges head-on, and grown in ways I never imagined. 
-                            The changes have brought me closer to my goals, and each day feels like a step toward a brighter future. !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
+                        <p>Wow, my life is completely different now. I've embraced new opportunities, faced challenges
+                            head-on, and grown in ways I never imagined.
+                            The changes have brought me closer to my goals, and each day feels like a step toward a
+                            brighter future. !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
                     </div>
                 </div>
             </div>
 
             <div class="u-center-text u-margin-top-big">
-                <a href="#" class="btn btn-text">Read all stories &rarr;</a>
+                <a href="#section-stories" class="btn btn-text">Read all stories &rarr;</a>
             </div>
         </section>
 
 
         <!--  =================== SECTION BOOK  =======================   -->
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="book">
                     <div class="book__form">
-                        <form action="#" class="form">
+                        <form id="bookingForm" class="form">
                             <div class="u-margin-bottom-medium">
                                 <h2 class="heading-secondary">
                                     START BOOKING NOW
                                 </h2>
                             </div>
                             <div class="form__group">
-                                <input id="name" type="text" class="form__input" placeholder="Full Name" required autocomplete="off">
+                                <input id="name" type="text" class="form__input" placeholder="Full Name" required
+                                    name="name" autocomplete="off">
                                 <label for="name" class="form__label">Full Name</label>
                             </div>
 
                             <div class="form__group">
-                                <input id="email" type="email" class="form__input" placeholder="Email Address" required autocomplete="off">
+                                <input id="email" type="email" class="form__input" placeholder="Email Address" required
+                                    name="email" autocomplete="off">
                                 <label for="email" class="form__label">Email Address</label>
                             </div>
 
                             <div class="form__group u-margin-bottom-medium">
                                 <div class="form__radio-group">
-                                    <input id="small" type="radio" class="form__radio-input" name="size" autocomplete="off">
+                                    <input id="small" type="radio" class="form__radio-input" name="size" value="small"
+                                        autocomplete="off">
                                     <label for="small" class="form__radio-label">
                                         <span class="form__radio-button"></span>
                                         Small tour group
@@ -351,7 +381,8 @@
                                 </div>
 
                                 <div class="form__radio-group">
-                                    <input id="large" type="radio" class="form__radio-input" name="size" autocomplete="off">
+                                    <input id="large" type="radio" class="form__radio-input" name="size" value="large"
+                                        autocomplete="off">
                                     <label for="large" class="form__radio-label">
                                         <span class="form__radio-button"></span>
                                         Large tour group
@@ -360,7 +391,8 @@
                             </div>
 
                             <div class="form__group">
-                                <button class="btn btn--green">Next Step</button>
+                                <button class="btn btn--green" type="submit">Next Step</button>
+                                <div id="bookingMsg" style="margin-top:1em;color:green;"></div>
                             </div>
                         </form>
                     </div>
@@ -375,15 +407,10 @@
 
             <picture class="footer__logo">
 
-                <source 
-                    srcset="img/logo-green-small-1x.png 1x, img/logo-green-2x.png 2x" 
-                    media="(max-width: 37.5em)"><!--THE media="" atribute specify the max-width: 600px(37.5em) and then we choosethe image in srcset="" atribute in case the width is lower then 600px  -->
-                <img 
-                    class="footer__logo" 
-                    srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
-                    src="img/logo-green-2x.png" 
-                    alt="Full logo" 
-                    src="img/logo-green-2x.png">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-2x.png 2x" media="(max-width: 37.5em)">
+                <!--THE media="" atribute specify the max-width: 600px(37.5em) and then we choosethe image in srcset="" atribute in case the width is lower then 600px  -->
+                <img class="footer__logo" srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+                    src="img/logo-green-2x.png" alt="Full logo" src="img/logo-green-2x.png">
             </picture>
             <!-- Move (copy, paste) the class footer__logo from the image into the <picture>nbsp;</picture> element. -->
             <!-- THE sourceset srcset="" atribute allowing us to choose the best image for the situation. WE CALL THIS AS DENSITY SWITCHING-->
@@ -393,17 +420,20 @@
             <div class="col-1-of-2">
                 <div class="footer__navigation">
                     <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        <li class="footer__item"><a href="company.html" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="contact.html" class="footer__link">Contact</a></li>
+                        <li class="footer__item"><a href="careers.html" class="footer__link">Careers</a></li>
+                        <li class="footer__item"><a href="privacy.html" class="footer__link">Privacy</a></li>
+                        <li class="footer__item"><a href="terms.html" class="footer__link">Terms</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-1-of-2">
                 <p class="footer__copyright">
-                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
+                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
+                        class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are
+                    100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your
+                    own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
                 </p>
             </div>
         </div>
@@ -414,26 +444,30 @@
         <div class="popup__content">
             <div class="popup__left">
                 <img class="popup__img" src="img/nat-8.jpg" alt="tour photo">
-                <img class="popup__img" 
-                            srcset="img/nat-8.jpg, 300w" 
-                            sizes="(max-width:900px) 20vw, (max-width: 600px) 30vw, 300px"
-                            alt="tour photo"
-                            src="img/nat-8.jpg">
+                <img class="popup__img" srcset="img/nat-8.jpg, 300w"
+                    sizes="(max-width:900px) 20vw, (max-width: 600px) 30vw, 300px" alt="tour photo" src="img/nat-8.jpg">
                 <img class="popup__img" src="img/nat-9.jpg" alt="tour photo">
             </div>
             <div class="popup__right">
                 <a href="#section-tours" class="popup__close">&times;CLOSE</a>
                 <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-                <p class="popup__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae impedit, veniam nisi laudantium suscipit enim quod laborum consequuntur tempore necessitatibus iusto placeat omnis voluptas dolorum aut voluptatem ducimus minus amet.
-                Harum culpa cupiditate odit ipsa dolore inventore voluptas, doloribus eveniet? Reiciendis, sunt obcaecati. Veniam, iste delectus! Illo a deserunt soluta vero numquam fuga, reiciendis, quos quasi laboriosam facilis cumque. Ipsa?
-                Temporibus dignissimos sapiente aperiam tempore itaque laborum illo nobis expedita facere beatae. Inventore ducimus sequi obcaecati delectus est, amet nemo distinctio magnam, repellendus beatae odit minus quidem aut omnis quo!
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3>
+                <p class="popup__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae impedit, veniam
+                    nisi laudantium suscipit enim quod laborum consequuntur tempore necessitatibus iusto placeat omnis
+                    voluptas dolorum aut voluptatem ducimus minus amet.
+                    Harum culpa cupiditate odit ipsa dolore inventore voluptas, doloribus eveniet? Reiciendis, sunt
+                    obcaecati. Veniam, iste delectus! Illo a deserunt soluta vero numquam fuga, reiciendis, quos quasi
+                    laboriosam facilis cumque. Ipsa?
+                    Temporibus dignissimos sapiente aperiam tempore itaque laborum illo nobis expedita facere beatae.
+                    Inventore ducimus sequi obcaecati delectus est, amet nemo distinctio magnam, repellendus beatae odit
+                    minus quidem aut omnis quo!
                 </p>
                 <a href="#" class="btn btn--green">Book me now</a>
             </div>
         </div>
     </div>
-    
+
 
     <!--  GRID GRID GRID TEST   --------------------------------- -->
     <!--
@@ -503,6 +537,7 @@
     </section>
 -->
 
+    <script src="public/main.js" defer></script>
 </body>
 
 </html>
