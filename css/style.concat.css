@@ -466,17 +466,17 @@ html {
   font-size: 62.5%;
   /* remember always the larger one before the smaller one. Therefore the tab-land is first then the tablet */
 }
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
   }
 }
-@media (min-width: 112.5em) {
+@media only screen and (min-width: 112.5em) {
   html {
     font-size: 75%;
   }
@@ -486,10 +486,15 @@ body {
   box-sizing: border-box; /* good practice to do like this with the body{border-box: box-sizing;} and in * {border-box:inherit;} */
   padding: 3rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   body {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: #7ed56f;
+  color: #fff;
 }
 
 /* holds all animations code */
@@ -551,7 +556,7 @@ body {
   letter-spacing: 3.5rem;
   animation: moveInRight 0.9s ease-out;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .heading-primary--main {
     letter-spacing: 1rem;
     font-size: 5rem;
@@ -564,7 +569,7 @@ body {
   letter-spacing: 1.5rem;
   animation: moveInLeft 1.3s ease-out;
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .heading-primary--sub {
     letter-spacing: 0.5rem;
   }
@@ -582,12 +587,12 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .heading-secondary {
     font-size: 3rem;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .heading-secondary {
     font-size: 2.5rem;
   }
@@ -621,7 +626,7 @@ body {
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-bottom-medium {
     margin-bottom: 3rem !important;
   }
@@ -630,10 +635,14 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-bottom-big {
     margin-bottom: 5rem !important;
   }
+}
+
+.u-margin-top-small {
+  margin-top: 1.5rem !important;
 }
 
 .u-margin-top-big {
@@ -677,7 +686,7 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   /* the transition property must be on initial state what is the .btn:link and .btn:visited or it doesn't work.
-  Simply we saying here in parent element the transition can be used on all properties */
+    Simply we saying here in parent element the transition can be used on all properties */
   position: relative;
   font-size: 1.6rem;
   border: none;
@@ -736,7 +745,7 @@ body {
   color: #7ed56f;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1 px solid #7ed56f;
+  border-bottom: 1px solid #7ed56f;
   padding: 3px;
   transition: all 0.2s;
 }
@@ -763,13 +772,13 @@ body {
   transition: all 0.3s;
   outline-offset: 2rem;
 }
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .composition__photo {
     margin-top: 8rem;
     width: 50%;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .composition__photo {
     float: left;
     position: relative;
@@ -781,7 +790,7 @@ body {
   left: 0;
   top: -2rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .composition__photo--p1 {
     top: 0;
     transform: scale(1.2);
@@ -791,7 +800,7 @@ body {
   right: 0;
   top: 2rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .composition__photo--p2 {
     top: -1rem;
     transform: scale(1.3);
@@ -802,7 +811,7 @@ body {
   left: 20%;
   top: 10rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .composition__photo--p3 {
     top: 1rem;
     left: 0;
@@ -825,6 +834,11 @@ body {
   position: relative;
   height: 50rem;
   /*  ============================== media query for cards  ========================================== */
+}
+@media only screen and (max-width: 75em) {
+  .card {
+    margin: 2rem auto;
+  }
 }
 .card__side {
   height: 52rem;
@@ -940,7 +954,7 @@ body {
   font-size: 6rem;
   font-weight: 100;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .card {
     height: auto;
     border-radius: 3px;
@@ -984,16 +998,16 @@ body {
   padding: 2.5rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4 rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .feature-box {
     padding: 2rem 2rem;
     margin-bottom: 7rem;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .feature-box {
     padding: 2rem;
   }
@@ -1009,7 +1023,7 @@ body {
   /* display:inline-block provides out off normal flow, bg-image:is image, 
   webkit-background-clip::text clipping the image to text, THEN you must also make the text color:transparent */
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .feature-box__icon {
     margin: 0;
   }
@@ -1030,14 +1044,14 @@ body {
   transform: skewX(-12deg);
   /* THE .story__shape element IS A CONTAINER FOR THE .story__image (the image) */
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .story {
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .story {
     transform: skewX(0);
   }
@@ -1060,7 +1074,7 @@ body {
     border-radius: none;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .story__shape {
     transform: translateX(-3rem) skewX(0);
   }
@@ -1074,7 +1088,7 @@ body {
 .story__text {
   transform: skewX(12deg);
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .story__text {
     transform: translateX(-3rem) skewX(0);
   }
@@ -1117,7 +1131,7 @@ body {
   display: block;
   transition: all 0.3s;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .form__input {
     width: 100%;
   }
@@ -1150,7 +1164,7 @@ body {
   width: 49%;
   display: inline-block;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .form__radio-group {
     width: 100%;
     margin-bottom: 2rem;
@@ -1286,12 +1300,12 @@ body {
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row:not(:last-child) {
     margin-bottom: 6rem;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row {
     max-width: 50rem;
     padding: 0 3rem;
@@ -1308,19 +1322,19 @@ body {
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row [class^=col-]:not(:last-child) {
     margin-right: 0;
     margin-bottom: 6rem;
   }
 }
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .row [class^=col-] {
     width: 100% !important;
     padding: 0.7rem 2.7rem;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row [class^=col-] {
     width: 100% !important;
     padding: 1.7rem 2.7rem;
@@ -1344,6 +1358,9 @@ body {
 .row .col-3-of-4 {
   width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
 }
+.row .col-1-of-1 {
+  width: 100%;
+}
 
 .navigation__checkbox {
   display: none;
@@ -1361,13 +1378,13 @@ body {
   text-align: center;
   cursor: pointer;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .navigation__button {
     top: 4rem;
     right: 4rem;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .navigation__button {
     top: 3rem;
     right: 3rem;
@@ -1384,13 +1401,13 @@ body {
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .navigation__background {
     top: 4.5rem;
     right: 4.5rem;
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .navigation__background {
     top: 3.5rem;
     right: 3.5rem;
@@ -1502,18 +1519,18 @@ body {
     height: 95vh;
   }
 }
-@media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
   .header {
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(255, 119, 48, 0.8)), url("../img/hero.jpg");
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .header {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
 }
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .header {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -1543,7 +1560,7 @@ body {
   font-size: 1.4rem;
   color: #f7f7f7;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer {
     padding: 8rem 0;
   }
@@ -1552,7 +1569,7 @@ body {
   text-align: center;
   margin-bottom: 6rem;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer__logo-box {
     margin-bottom: 6rem;
   }
@@ -1566,7 +1583,7 @@ body {
   padding-top: 2rem;
   display: inline-block;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer__navigation {
     width: 100%;
     text-align: center;
@@ -1600,7 +1617,7 @@ body {
   width: 80%;
   float: right;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer__copyright {
     width: 100%;
     float: none;
@@ -1612,7 +1629,7 @@ body {
   padding: 25rem 0;
   margin-top: -20vh;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-about {
     padding: 20rem 0;
   }
@@ -1625,12 +1642,12 @@ body {
   transform: skewY(-7deg);
   margin-top: -10rem;
 }
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .section-features {
     margin-top: 35rem;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-features {
     margin-top: -5rem;
   }
@@ -1638,7 +1655,7 @@ body {
 .section-features > * {
   transform: skewY(7deg);
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-features {
     padding: 10rem 0;
   }
@@ -1647,9 +1664,10 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
-  margin-top: -14rem; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Mozna zmenit na -10rem !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  margin-top: -14rem;
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Mozna zmenit na -10rem !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-tours {
     padding: 20rem 0 10rem 0;
   }
@@ -1660,7 +1678,7 @@ body {
   padding: 15rem 0;
   background-color: transparent;
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-stories {
     padding: 10rem 0;
   }
@@ -1670,7 +1688,7 @@ body {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-book {
     padding: 10rem 0;
   }
@@ -1682,13 +1700,13 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .book {
     background-image: linear-gradient(105deg, rgba(247, 247, 247, 0.9) 0%, rgba(255, 255, 255, 0.9) 63%, transparent 63%), url("../../img/nat-10.jpg");
     background-size: cover;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .book {
     background-image: linear-gradient(to right, rgba(247, 247, 247, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../../img/nat-10.jpg");
   }
@@ -1697,16 +1715,55 @@ body {
   width: 50%;
   padding: 6rem;
 }
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .book__form {
     width: 63%;
   }
 }
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .book__form {
     width: 100%;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
-
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background-color: rgba(255, 255, 255, 0.97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 1.2rem 3rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+@media only screen and (max-width: 56.25em) {
+  .section-nav {
+    padding: 1rem 1.5rem;
+    gap: 0.8rem 1.2rem;
+  }
+}
+.section-nav__link:link, .section-nav__link:visited {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: #333;
+  text-decoration: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 10rem;
+  transition: all 0.25s;
+}
+.section-nav__link:hover, .section-nav__link:active {
+  background-color: #7ed56f;
+  color: #fff;
+  transform: translateY(-2px);
+}
+@media only screen and (max-width: 37.5em) {
+  .section-nav__link {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

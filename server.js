@@ -24,6 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 // Serve image files from the 'img' directory
 app.use('/img', express.static(path.join(__dirname, 'img')));
+// Serve font files from the css/fonts directory
+app.use('/css/fonts', express.static(path.join(__dirname, 'css', 'fonts')));
 
 
 // ROUTES
@@ -52,6 +54,26 @@ app.get('/contact.html', (req, res) => {
 // Serve the Booking page
 app.get('/booking.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/booking.html'));
+});
+
+// Serve the Company page
+app.get('/company.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/company.html'));
+});
+
+// Serve the Careers page
+app.get('/careers.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/careers.html'));
+});
+
+// Serve the Privacy page
+app.get('/privacy.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/privacy.html'));
+});
+
+// Serve the Terms page
+app.get('/terms.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/terms.html'));
 });
 
 

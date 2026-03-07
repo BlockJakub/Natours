@@ -11,6 +11,28 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input id="navi-toggle" class="navigation__checkbox" type="checkbox">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="/" class="navigation__link"><span>00</span>Home</a></li>
+                <li class="navigation__item"><a href="/company.html" class="navigation__link"><span>01</span>Company</a>
+                </li>
+                <li class="navigation__item"><a href="/contact.html" class="navigation__link"><span>02</span>Contact</a>
+                </li>
+                <li class="navigation__item"><a href="/careers.html" class="navigation__link"><span>03</span>Careers</a>
+                </li>
+                <li class="navigation__item"><a href="/privacy.html" class="navigation__link"><span>04</span>Privacy</a>
+                </li>
+                <li class="navigation__item"><a href="/terms.html" class="navigation__link"><span>05</span>Terms</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__logo-box">
             <img class="header__logo" src="/img/logo-white.png" alt="logo">
@@ -24,28 +46,133 @@
         </div>
     </header>
     <main class="main">
+
         <section class="section-about u-margin-bottom-big">
             <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary">About Natours</h2>
+                <h2 class="heading-secondary">Who We Are</h2>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
-                    <h3 class="heading-tertiary u-margin-bottom-small">Our Mission</h3>
-                    <p class="paragraph">Natours is dedicated to providing unforgettable adventure tours around the
-                        world. Our mission is to connect people with nature and create lifelong memories.</p>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Our Team</h3>
-                    <p class="paragraph">Our team consists of experienced guides, travel experts, and passionate
-                        adventurers who ensure every tour is safe, fun, and unique.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Adventure as a way of life</h3>
+                    <p class="paragraph">Natours was born from a simple passion — a love for nature and a desire to show
+                        others what the world truly has to offer. We are not just a travel agency. We are guides who
+                        believe that the best memories are made outside your comfort zone.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Our mission</h3>
+                    <p class="paragraph">To connect people with nature and create experiences that last a lifetime.
+                        Every tour is carefully designed to be safe, authentic, and unforgettable — tailored exactly to
+                        you.</p>
+                    <a href="/#section-tours" class="btn-text">Explore our tours &rarr;</a>
                 </div>
                 <div class="col-1-of-2">
-                    <picture>
-                        <source srcset="/img/768x1024/nat-4-768x1024.webp" media="(min-width: 769px)">
-                        <source srcset="/img/320x480/nat-4-320x480.webp" media="(max-width: 768px)">
-                        <img src="/img/nat-4.jpg" alt="Company" style="width:100%;max-width:400px;">
-                    </picture>
+                    <div class="composition">
+                        <img srcset="/img/nat-1.jpg 300w, /img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="/img/nat-1-large.jpg" alt="Tour 1" class="composition__photo composition__photo--p1">
+                        <img srcset="/img/nat-2.jpg 300w, /img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="/img/nat-2-large.jpg" alt="Tour 2" class="composition__photo composition__photo--p2">
+                        <img srcset="/img/nat-3.jpg 300w, /img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="/img/nat-3-large.jpg" alt="Tour 3" class="composition__photo composition__photo--p3">
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="section-features">
+            <div class="row">
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-world"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Global reach</h3>
+                        <p class="feature-box__text">We operate in more than 40 countries worldwide. Every year we add
+                            new destinations so even the most seasoned traveller always finds a new adventure.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-compass"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Expert guides</h3>
+                        <p class="feature-box__text">Our guides are certified professionals with years of experience.
+                            They know their terrain like the back of their hand and will take great care of you.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-map"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Unique routes</h3>
+                        <p class="feature-box__text">We don't take you along tourist trails. Our routes reveal hidden
+                            beauty that ordinary travellers never get to see.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-heart"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Client first</h3>
+                        <p class="feature-box__text">Every tour is tailored to your needs. A happy client is our
+                            greatest reward and our drive to keep going further.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-stories">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="/img/video.mp4" type="video/mp4">
+                    <source src="/img/video.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Our story</h2>
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="/img/nat-8.jpg" alt="Jonas, founder" class="story__img">
+                        <figcaption class="story__caption">Jonas, founder</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Natours started as a dream</h3>
+                        <p class="paragraph">It all began with an expedition to Egypt in 2010. Jonas Schmedtmann, then a
+                            software engineer with a passion for travel, came home with a firm resolve: to help others
+                            experience the magic of nature the way he had.</p>
+                        <p class="paragraph">Today Natours serves thousands of clients every year across the globe. What
+                            hasn't changed is the original vision — an authentic experience, genuine care for the
+                            client, and deep respect for nature.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row u-margin-top-small">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="/img/nat-9.jpg" alt="Mary, senior guide" class="story__img">
+                        <figcaption class="story__caption">Mary, senior guide</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">The team that makes the magic</h3>
+                        <p class="paragraph">Behind every unforgettable tour is our team of passionate experts. Mary,
+                            our senior guide for the Himalayan region, leads clients through even the most demanding
+                            mountain passes with a smile.</p>
+                        <p class="paragraph">The whole team shares one belief: travel changes people. And we are here to
+                            make that change happen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-book">
+            <div class="row">
+                <div style="text-align: center; padding: 4rem 0;">
+                    <h2 class="heading-secondary u-margin-bottom-small" style="color: #fff;">Ready for an adventure?
+                    </h2>
+                    <p class="paragraph" style="color: #fff; margin-bottom: 3rem;">Browse our tours and book your
+                        experience today.</p>
+                    <a href="/#section-tours" class="btn btn--white btn--animated">Explore tours</a>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
@@ -57,17 +184,6 @@
         </div>
         <div class="row">
             <div class="col-1-of-2">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="company.html" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="contact.html" class="footer__link">Contact</a></li>
-                        <li class="footer__item"><a href="careers.html" class="footer__link">Careers</a></li>
-                        <li class="footer__item"><a href="privacy.html" class="footer__link">Privacy</a></li>
-                        <li class="footer__item"><a href="terms.html" class="footer__link">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-1-of-2">
                 <p class="footer__copyright">
                     Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
                         class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann.
@@ -75,6 +191,7 @@
             </div>
         </div>
     </footer>
+    <script src="/main.js" defer></script>
 </body>
 
 </html>

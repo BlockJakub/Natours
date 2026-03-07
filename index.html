@@ -27,20 +27,15 @@
 
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>01</span>About
-                        Natours</a>
+                <li class="navigation__item"><a href="/company.html" class="navigation__link"><span>01</span>Company</a>
                 </li>
-                <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>02</span>Your
-                        benefits</a>
+                <li class="navigation__item"><a href="/contact.html" class="navigation__link"><span>02</span>Contact</a>
                 </li>
-                <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>03</span>Popular
-                        tours</a>
+                <li class="navigation__item"><a href="/careers.html" class="navigation__link"><span>03</span>Careers</a>
                 </li>
-                <li class="navigation__item"><a href="#section-stories"
-                        class="navigation__link"><span>04</span>Stories</a>
+                <li class="navigation__item"><a href="/privacy.html" class="navigation__link"><span>04</span>Privacy</a>
                 </li>
-                <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>05</span>Book
-                        now</a>
+                <li class="navigation__item"><a href="/terms.html" class="navigation__link"><span>05</span>Terms</a>
                 </li>
             </ul>
         </nav>
@@ -62,6 +57,14 @@
     </header>
 
     <main class="main">
+        <nav class="section-nav">
+            <a href="#section-about" class="section-nav__link">About Natours</a>
+            <a href="#section-features" class="section-nav__link">Your Benefits</a>
+            <a href="#section-tours" class="section-nav__link">Popular Tours</a>
+            <a href="#section-stories" class="section-nav__link">Stories</a>
+            <a href="#section-book" class="section-nav__link">Book Now</a>
+        </nav>
+
         <section class="section-about" id="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
@@ -88,17 +91,17 @@
                     <div class="composition">
 
                         <img class="composition__photo composition__photo--p1"
-                            srcset="img/nat-1.jpg, 300w, img/nat-1-large.jpg 1000w"
+                            srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
                             sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 1"
                             src="img/320x480/nat-1-320x213.webp">
 
                         <img class="composition__photo composition__photo--p2"
-                            srcset="img/nat-2.jpg, 300w, img/nat-2-large.jpg 1000w"
+                            srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
                             sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 2"
-                            src="img/320x480/nat-2-320x213.webp">
+                            src="img/nat-2.jpg">
 
                         <img class="composition__photo composition__photo--p3"
-                            srcset="img/nat-3.jpg, 300w, img/nat-3-large.jpg 1000w"
+                            srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
                             sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 3"
                             src="img/nat-3-large.jpg">
                     </div>
@@ -178,7 +181,7 @@
         <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
-                    Most polpular tours
+                    Most popular tours
                 </h2>
             </div>
             <div class="row">
@@ -209,7 +212,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£297</p>
                                 </div>
-                                <a class="btn btn--white book-now-btn" href="#section-book">Book Now</a>
+                                <a class="btn btn--white book-now-btn" href="#popup">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -241,7 +244,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£497</p>
                                 </div>
-                                <a class="btn btn--white book-now-btn" href="#section-book">Book Now</a>
+                                <a class="btn btn--white book-now-btn" href="#popup">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -274,7 +277,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£897</p>
                                 </div>
-                                <a class="btn btn--white book-now-btn" href="#section-book">Book Now</a>
+                                <a class="btn btn--white book-now-btn" href="#popup">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -293,7 +296,7 @@
         <section class="section-stories" id="section-stories">
             <!-- .bg-video  IS A COMPONENT-->
             <div class="bg-video">
-                <video class="bg-video__content" autoplay mutted loop>
+                <video class="bg-video__content" autoplay muted loop>
                     <!-- These sources make sure it works accross all the browsers -->
                     <source src="img/video.mp4" type="video/mp4">
                     <source src="img/video.webm" type="video/webm">
@@ -320,7 +323,7 @@
                             moments.
                             We explored new places, enjoyed delicious meals together, and created memories that will
                             last a lifetime.
-                            It was a week of love and connection. !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
+                            It was a truly a week of love, connection, and pure joy.</p>
                     </div>
                 </div>
             </div>
@@ -335,8 +338,9 @@
                         <h3 class="heading-tertiary u-margin-bottom-small">Wow my life is completely different</h3>
                         <p>Wow, my life is completely different now. I've embraced new opportunities, faced challenges
                             head-on, and grown in ways I never imagined.
-                            The changes have brought me closer to my goals, and each day feels like a step toward a
-                            brighter future. !!!MUST CONTAIN 43 WORDS WORDS WORDS!</p>
+                            The Natours experience brought me closer to my goals, and each day feels like a step toward
+                            a
+                            brighter, more adventurous future.</p>
                     </div>
                 </div>
             </div>
@@ -410,24 +414,13 @@
                 <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-2x.png 2x" media="(max-width: 37.5em)">
                 <!--THE media="" atribute specify the max-width: 600px(37.5em) and then we choosethe image in srcset="" atribute in case the width is lower then 600px  -->
                 <img class="footer__logo" srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
-                    src="img/logo-green-2x.png" alt="Full logo" src="img/logo-green-2x.png">
+                    src="img/logo-green-2x.png" alt="Full logo">
             </picture>
             <!-- Move (copy, paste) the class footer__logo from the image into the <picture>nbsp;</picture> element. -->
             <!-- THE sourceset srcset="" atribute allowing us to choose the best image for the situation. WE CALL THIS AS DENSITY SWITCHING-->
         </div>
 
         <div class="row">
-            <div class="col-1-of-2">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="company.html" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="contact.html" class="footer__link">Contact</a></li>
-                        <li class="footer__item"><a href="careers.html" class="footer__link">Careers</a></li>
-                        <li class="footer__item"><a href="privacy.html" class="footer__link">Privacy</a></li>
-                        <li class="footer__item"><a href="terms.html" class="footer__link">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="col-1-of-2">
                 <p class="footer__copyright">
                     Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
@@ -463,7 +456,7 @@
                     Inventore ducimus sequi obcaecati delectus est, amet nemo distinctio magnam, repellendus beatae odit
                     minus quidem aut omnis quo!
                 </p>
-                <a href="#" class="btn btn--green">Book me now</a>
+                <a href="#section-book" class="btn btn--green">Book now!</a>
             </div>
         </div>
     </div>
@@ -537,7 +530,7 @@
     </section>
 -->
 
-    <script src="public/main.js" defer></script>
+    <script src="/main.js" defer></script>
 </body>
 
 </html>

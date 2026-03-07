@@ -1,27 +1,95 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
     <title>About | Natours</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/main.js" defer></script>
 </head>
 
 <body>
-    <nav>
-        <!-- ...existing navbar... -->
-        <a href="/">Home</a>
-        <a href="/tours.html">Tours</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/booking.html">Booking</a>
-    </nav>
-    <main>
-        <h1>About Natours</h1>
-        <p>Learn more about our story, mission, and team.</p>
+    <div class="navigation">
+        <input id="navi-toggle" class="navigation__checkbox" type="checkbox">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="/" class="navigation__link"><span>00</span>Home</a></li>
+                <li class="navigation__item"><a href="/company.html" class="navigation__link"><span>01</span>Company</a>
+                </li>
+                <li class="navigation__item"><a href="/contact.html" class="navigation__link"><span>02</span>Contact</a>
+                </li>
+                <li class="navigation__item"><a href="/careers.html" class="navigation__link"><span>03</span>Careers</a>
+                </li>
+                <li class="navigation__item"><a href="/privacy.html" class="navigation__link"><span>04</span>Privacy</a>
+                </li>
+                <li class="navigation__item"><a href="/terms.html" class="navigation__link"><span>05</span>Terms</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <header class="header">
+        <div class="header__logo-box">
+            <img class="header__logo" src="/img/logo-white.png" alt="logo">
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Natours</span>
+                <span class="heading-primary--sub">About us</span>
+            </h1>
+            <a class="btn btn--white btn--animated" href="/">Back to Home</a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-about u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Who we are</h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Your adventure starts here</h3>
+                    <p class="paragraph">Natours was founded by a group of passionate adventurers who believe that
+                        travel is the best way to grow as a person. We organize small-group tours to the most
+                        breathtaking corners of the world.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Safety and quality first</h3>
+                    <p class="paragraph">Every tour is carefully designed with safety, sustainability, and unforgettable
+                        experiences in mind. Our certified guides have decades of combined experience in the field.</p>
+                    <a href="/#section-tours" class="btn-text">See our tours &rarr;</a>
+                </div>
+                <div class="col-1-of-2">
+                    <picture>
+                        <source srcset="/img/768x1024/nat-4-768x1024.webp" media="(min-width: 769px)">
+                        <source srcset="/img/320x480/nat-4-320x480.webp" media="(max-width: 768px)">
+                        <img src="/img/nat-4.jpg" alt="Natours team in nature"
+                            style="width:100%;max-width:400px;border-radius:3px;">
+                    </picture>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <picture class="footer__logo">
+                <source srcset="/img/logo-green-small-1x.png 1x, /img/logo-green-2x.png 2x" media="(max-width: 37.5em)">
+                <img class="footer__logo" srcset="/img/logo-green-1x.png 1x, /img/logo-green-2x.png 2x"
+                    src="/img/logo-green-2x.png" alt="Full logo">
+            </picture>
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
+                        class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="/main.js" defer></script>
 </body>
 
 </html>

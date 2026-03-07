@@ -11,6 +11,28 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input id="navi-toggle" class="navigation__checkbox" type="checkbox">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="/" class="navigation__link"><span>00</span>Home</a></li>
+                <li class="navigation__item"><a href="/company.html" class="navigation__link"><span>01</span>Company</a>
+                </li>
+                <li class="navigation__item"><a href="/contact.html" class="navigation__link"><span>02</span>Contact</a>
+                </li>
+                <li class="navigation__item"><a href="/careers.html" class="navigation__link"><span>03</span>Careers</a>
+                </li>
+                <li class="navigation__item"><a href="/privacy.html" class="navigation__link"><span>04</span>Privacy</a>
+                </li>
+                <li class="navigation__item"><a href="/terms.html" class="navigation__link"><span>05</span>Terms</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__logo-box">
             <img class="header__logo" src="/img/logo-white.png" alt="logo">
@@ -24,32 +46,137 @@
         </div>
     </header>
     <main class="main">
+
         <section class="section-about u-margin-bottom-big">
             <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary">Join Our Team</h2>
+                <h2 class="heading-secondary">Join our team</h2>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
-                    <h3 class="heading-tertiary u-margin-bottom-small">Open Positions</h3>
-                    <ul class="paragraph">
-                        <li>Adventure Tour Guide</li>
-                        <li>Travel Consultant</li>
-                        <li>Marketing Specialist</li>
-                        <li>Customer Support</li>
-                    </ul>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Why Work With Us?</h3>
-                    <p class="paragraph">Natours offers a dynamic work environment, opportunities for growth, and the
-                        chance to make a difference in travelers' lives. We value passion, teamwork, and innovation.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Why Natours?</h3>
+                    <p class="paragraph">At Natours you don't just go to work. You are part of a mission — helping
+                        people experience the beauty of the world in a way that changes their perspective. We work in a
+                        dynamic, open environment where every voice counts.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Our culture</h3>
+                    <p class="paragraph">We believe in balancing work with adventure. Our employees travel regularly,
+                        test new routes and bring fresh ideas. Innovation, passion, and teamwork are our core values.
+                    </p>
+                    <a href="/contact.html" class="btn-text">Send us your CV &rarr;</a>
                 </div>
                 <div class="col-1-of-2">
-                    <picture>
-                        <source srcset="/img/768x1024/nat-5-768x1024.webp" media="(min-width: 769px)">
-                        <source srcset="/img/320x480/nat-5-320x480.webp" media="(max-width: 768px)">
-                        <img src="/img/nat-5.jpg" alt="Careers" style="width:100%;max-width:400px;">
-                    </picture>
+                    <div class="composition">
+                        <img srcset="/img/nat-5.jpg 300w" sizes="300px" src="/img/nat-5.jpg" alt="Our team"
+                            class="composition__photo composition__photo--p1">
+                        <img srcset="/img/nat-6.jpg 300w" sizes="300px" src="/img/nat-6.jpg" alt="Adventure"
+                            class="composition__photo composition__photo--p2">
+                        <img srcset="/img/nat-7.jpg 300w" sizes="300px" src="/img/nat-7.jpg" alt="At work"
+                            class="composition__photo composition__photo--p3">
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="section-features">
+            <div class="row">
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-heart"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Great culture</h3>
+                        <p class="feature-box__text">A friendly team, open communication and a shared passion for
+                            travel. Welcome to the Natours family.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-compass"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Travel on the job</h3>
+                        <p class="feature-box__text">Test new routes and destinations as part of your role. Real
+                            adventure belongs in your working hours.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-world"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Career growth</h3>
+                        <p class="feature-box__text">Regular training, mentoring and a clear career path. Your
+                            development is our investment in the future.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-map"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Flexibility</h3>
+                        <p class="feature-box__text">Flexible working hours, remote work options and individual
+                            arrangements for different roles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-about u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Open positions</h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Adventure Tour Guide</h3>
+                    <p class="paragraph">We are looking for experienced guides for trekking and expedition tours
+                        worldwide. Requirements: min. 3 years of experience, first aid certification, and fluent
+                        English.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Travel Consultant</h3>
+                    <p class="paragraph">Help clients find the tour of their dreams. Ideal for communicative
+                        personalities with a passion for travel and knowledge of at least two world destinations.</p>
+                </div>
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Marketing Specialist</h3>
+                    <p class="paragraph">Create content that inspires. We are looking for a creative marketer with
+                        experience in social media and content marketing in the travel industry.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Customer Support</h3>
+                    <p class="paragraph">Be the first point of contact for our clients. We need an empathetic person
+                        with excellent communication skills and fluency in English or German.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-stories">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="/img/video.mp4" type="video/mp4">
+                    <source src="/img/video.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">What our team says</h2>
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="/img/nat-6.jpg" alt="Luke, guide" class="story__img">
+                        <figcaption class="story__caption">Luke, guide</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">This is more than just a job</h3>
+                        <p class="paragraph">Three years ago I joined as a guide in Nepal. Since then I have passed
+                            through 15 countries, led hundreds of clients and experienced things I never even dreamed
+                            of. Natours gave me freedom and purpose.</p>
+                        <p class="paragraph">Every year is different, every expedition brings new challenges. But that
+                            is exactly why I am here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-book">
+            <div class="row">
+                <div style="text-align: center; padding: 4rem 0;">
+                    <h2 class="heading-secondary u-margin-bottom-small" style="color: #fff;">Interested?</h2>
+                    <p class="paragraph" style="color: #fff; margin-bottom: 3rem;">Send us your CV and a cover letter.
+                        We respond within 5 business days.</p>
+                    <a href="/contact.html" class="btn btn--white btn--animated">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
@@ -61,17 +188,6 @@
         </div>
         <div class="row">
             <div class="col-1-of-2">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="company.html" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="contact.html" class="footer__link">Contact</a></li>
-                        <li class="footer__item"><a href="careers.html" class="footer__link">Careers</a></li>
-                        <li class="footer__item"><a href="privacy.html" class="footer__link">Privacy</a></li>
-                        <li class="footer__item"><a href="terms.html" class="footer__link">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-1-of-2">
                 <p class="footer__copyright">
                     Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
                         class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann.
@@ -79,6 +195,7 @@
             </div>
         </div>
     </footer>
+    <script src="/main.js" defer></script>
 </body>
 
 </html>

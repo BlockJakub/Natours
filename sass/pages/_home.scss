@@ -1,4 +1,3 @@
-
 @use "../abstracts/variables" as *;
 @use "../abstracts/functions" as *;
 
@@ -10,15 +9,14 @@
     @include respond(tab-port) {
         padding: 20rem 0;
     }
-    
+
 }
 
 .section-features {
     padding: 20rem 0;
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba($color-primary-light, .8), 
-        rgba($color-primary-dark, .8)), 
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, .8),
+            rgba($color-primary-dark, .8)),
         url("../../img/hero.jpg");
     background-size: cover;
     transform: skewY(-7deg);
@@ -33,7 +31,8 @@
     }
 
 
-    & > * { // selector is .section-features > *
+    &>* {
+        // selector is .section-features > *
         transform: skewY(7deg);
     }
 
@@ -45,7 +44,8 @@
 .section-tours {
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
-    margin-top: -14rem; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Mozna zmenit na -10rem !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    margin-top: -14rem;
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Mozna zmenit na -10rem !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
     @include respond(tab-port) {
         padding: 20rem 0 10rem 0;
@@ -64,44 +64,40 @@
 
 .section-book {
     padding: 15rem 0;
-    background-image: linear-gradient(
-        to right bottom, 
-        $color-primary-light, 
-        $color-primary-dark);
+    background-image: linear-gradient(to right bottom,
+            $color-primary-light,
+            $color-primary-dark);
 
-        @include respond(tab-port) {
-            padding: 10rem 0;
-        }
-    
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
 }
 
 .book {
-    background-image: linear-gradient(
-        105deg, 
-        rgba($color-grey-light-1, .9) 0%,
-        rgba($color-white, .9) 50%,
-        transparent 50%), 
+    background-image: linear-gradient(105deg,
+            rgba($color-grey-light-1, .9) 0%,
+            rgba($color-white, .9) 50%,
+            transparent 50%),
         url("../../img/nat-10.jpg");
     background-size: 100%;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
     @include respond(tab-land) {
-        background-image: linear-gradient(
-        105deg, 
-        rgba($color-grey-light-1, .9) 0%,
-        rgba($color-white, .9) 63%,
-        transparent 63%), 
-        url("../../img/nat-10.jpg");
+        background-image: linear-gradient(105deg,
+                rgba($color-grey-light-1, .9) 0%,
+                rgba($color-white, .9) 63%,
+                transparent 63%),
+            url("../../img/nat-10.jpg");
         background-size: cover;
     }
 
     @include respond(tab-port) {
-        background-image: linear-gradient(
-        to right, 
-        rgba($color-grey-light-1, .9) 0%,
-        rgba($color-white, .9) 100%), 
-        url("../../img/nat-10.jpg");
+        background-image: linear-gradient(to right,
+                rgba($color-grey-light-1, .9) 0%,
+                rgba($color-white, .9) 100%),
+            url("../../img/nat-10.jpg");
     }
 
     &__form {
@@ -114,6 +110,56 @@
 
         @include respond(tab-port) {
             width: 100%;
+        }
+    }
+}
+
+// ===================================================
+// SECTION NAV – pouze na homepage (sticky kotvovaá lišta)
+// ===================================================
+.section-nav {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background-color: rgba($color-white, .97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 .5rem 2rem rgba($color-black, .08);
+
+    @include respond(tab-port) {
+        padding: 1rem 1.5rem;
+        gap: .8rem 1.2rem;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .15rem;
+            color: $color-grey-dark-3;
+            text-decoration: none;
+            padding: .7rem 1.8rem;
+            border-radius: 10rem;
+            transition: all .25s;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $color-primary;
+            color: $color-white;
+            transform: translateY(-2px);
+        }
+
+        @include respond(phone) {
+            font-size: 1.2rem;
+            padding: .6rem 1.2rem;
         }
     }
 }
