@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Contact | Natours</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <input id="navi-toggle" class="navigation__checkbox" type="checkbox">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="index.html" class="navigation__link"><span>00</span>Home</a></li>
+                <li class="navigation__item"><a href="company.html" class="navigation__link"><span>01</span>Company</a>
+                </li>
+                <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>02</span>Contact</a>
+                </li>
+                <li class="navigation__item"><a href="careers.html" class="navigation__link"><span>03</span>Careers</a>
+                </li>
+                <li class="navigation__item"><a href="privacy.html" class="navigation__link"><span>04</span>Privacy</a>
+                </li>
+                <li class="navigation__item"><a href="terms.html" class="navigation__link"><span>05</span>Terms</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <header class="header">
+        <div class="header__logo-box">
+            <img class="header__logo" src="img/logo-white.png" alt="logo">
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Natours</span>
+                <span class="heading-primary--sub">Contact Us</span>
+            </h1>
+            <a class="btn btn--white btn--animated" href="index.html">Back to Home</a>
+        </div>
+    </header>
+    <main class="main">
+
+        <section class="section-about u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">We are here for you</h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Get in touch</h3>
+                    <p class="paragraph">Have a question about one of our tours, need to clarify a booking, or just want
+                        to say hello? Fill in the form and we will get back to you within 24 hours.</p>
+                    <div class="book__form" style="margin-top: 3rem;">
+                        <form id="contactForm" class="form">
+                            <div class="form__group">
+                                <input type="text" id="contact-name" name="name" class="form__input"
+                                    placeholder="Your name" required>
+                                <label for="contact-name" class="form__label">Your name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" id="contact-email" name="email" class="form__input"
+                                    placeholder="Your email" required>
+                                <label for="contact-email" class="form__label">Your email</label>
+                            </div>
+                            <div class="form__group">
+                                <textarea id="contact-message" name="message" class="form__input"
+                                    placeholder="Your message" required
+                                    style="height:120px;resize:vertical;"></textarea>
+                                <label for="contact-message" class="form__label">Your message</label>
+                            </div>
+                            <div class="form__group">
+                                <button type="submit" class="btn btn--green">Send message</button>
+                            </div>
+                        </form>
+                        <div id="contactMsg" class="u-margin-top-small"></div>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Contact details</h3>
+                    <p class="paragraph">
+                        <strong>Natours Ltd.</strong><br>
+                        Adventure Street 42<br>
+                        London, EC1A 1BB, United Kingdom
+                    </p>
+                    <p class="paragraph">
+                        ✉ <a href="mailto:hello@natours.com" class="btn-text">hello@natours.com</a><br>
+                        ☎ +44 20 7946 0123
+                    </p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Opening hours</h3>
+                    <p class="paragraph">
+                        Monday – Friday: 9:00 – 18:00<br>
+                        Saturday: 10:00 – 14:00<br>
+                        Sunday: closed
+                    </p>
+                    <picture>
+                        <source srcset="img/768x1024/nat-8-768x1024.webp" media="(min-width: 769px)">
+                        <source srcset="img/320x480/nat-8-320x480.webp" media="(max-width: 768px)">
+                        <img src="img/nat-8.jpg" alt="Our office" style="width:100%;max-width:400px;margin-top:2rem;">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, /img/logo-green-2x.png 2x" media="(max-width: 37.5em)">
+                <img class="footer__logo" srcset="img/logo-green-1x.png 1x, /img/logo-green-2x.png 2x"
+                    src="img/logo-green-2x.png" alt="Full logo">
+            </picture>
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#"
+                        class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
